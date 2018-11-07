@@ -19,7 +19,7 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
 
 <!--more-->
 
-# 参考连接链接
+# 参考连接
 
 1. [使用Travis CI持续部署Hexo博客](https://www.jianshu.com/p/5691815b81b6)
 
@@ -111,7 +111,7 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
         
         我们这里只把github的刚刚生成的token写入环境变量，这里不晓得会不会有安全问题，但是绝对不对写到 **.travis.yml** 里面
         
-        value 填 github_token
+        name 填 GITHUB_TOKEN
         value 填 刚刚生成的token
         Display value in build log 别打钩，相对安全一点
 5. 在源码中新建一个 **.travis.yml** 文件
@@ -131,23 +131,23 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
     after_script:
       - cd ./public
       - git init
-      - git config user.name ${CONFIG_USERNAME}
-      - git config user.email ${CONFIG_EMAIL}
+      - git config user.name ${GIT_CONFIG_USERNAME}
+      - git config user.email ${GIT_CONFIG_EMAIL}
       - git add .
       - git commit -m "Update docs"
-      - git push --force --quiet "https://${github_token}@${GH_REF}" master:master
+      - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
     
     branches:
       only:
         - hexo
-     
+    
     #####################################
     # 环境变量，把相应的键值改为你自己的就行了 #
     #####################################
     env:
      global:
-       - CONFIG_USERNAME: TonyJavaZ
-       - CONFIG_EMAIL: uljjmhn520@gmail.com
+       - GIT_CONFIG_USERNAME: TonyJavaZ
+       - GIT_CONFIG_EMAIL: uljjmhn520@gmail.com
        - GH_REF: github.com/uljjmhn520/uljjmhn520.github.io.git
     
     ```
@@ -156,4 +156,8 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
 
     1. push 你的blog源码项目到github
 
-    2. 去 travis 后台查看日志
+    2. 去 travis 后台查看日志可以看到部署过程
+    
+# Re参考连接
+
+1. [使用Travis CI持续部署Hexo博客](https://www.jianshu.com/p/5691815b81b6)
