@@ -3,4 +3,4 @@
 git status
 git add .
 git commit -am "update post"
-git push origin hexo
+git push origin hexo-source

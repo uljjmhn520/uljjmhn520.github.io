@@ -2,9 +2,12 @@
 layout: post
 title: "debian realtek 无线网卡安装"
 description: ""
-category : "@linux"
 date: "2017-02-20 00:00:01"
-tags: []
+categories:
+  - linux
+tags:
+  - network
+  - debian
 ---
 从前blog移植过来，暂无摘要，后期再补
 <!-- more -->  

@@ -5,7 +5,7 @@ share: true
 toc: true
 date: "2018-06-28 18:07:32"
 categories:
-  - other
+  - develop
 
 tags:
   - 

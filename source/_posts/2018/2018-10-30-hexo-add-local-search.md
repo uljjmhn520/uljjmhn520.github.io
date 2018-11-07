@@ -7,6 +7,7 @@ date: 2018-10-30 18:58:13
 categories:
 tags:
   - blog
+  - hexo
 ---
 
 为 hexo - next 增加搜索功能，方便快速定位

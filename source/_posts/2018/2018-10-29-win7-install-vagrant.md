@@ -5,10 +5,10 @@ share: true
 toc: true
 date: "2018-10-29 18:15:21"
 categories:
-  - 
+  - develop
 
 tags:
-  - develop
+  - vagrant
 
 ---
 

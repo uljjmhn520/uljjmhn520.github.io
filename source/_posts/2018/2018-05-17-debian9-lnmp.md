@@ -5,7 +5,7 @@ share: true
 toc: true
 date: "2018-05-17 00:00:02"
 categories:
-  - web
+  - develop
 
 tags:
   - debian

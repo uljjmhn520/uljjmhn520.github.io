@@ -2,9 +2,11 @@
 layout: post
 title: "ionic hot update"
 description: ""
-category : "@web"
 date: "2017-12-01 00:00:01"
-tags: []
+categories:
+  - develop
+tags:
+  - ionic
 ---
 从前blog移植过来，暂无摘要，后期再补
 <!-- more -->  

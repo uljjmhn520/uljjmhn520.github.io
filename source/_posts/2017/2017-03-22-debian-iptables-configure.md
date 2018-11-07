@@ -2,9 +2,12 @@
 layout: post
 title: "debian 的 iptables 的常用配置"
 description: ""
-category : "@linux"
 date: "2017-03-22 00:00:01"
-tags: [ linux , iptables ,config ]
+categories:
+  - linux
+tags:
+  - iptables
+  - config
 ---
 从前blog移植过来，暂无摘要，后期再补
 <!-- more -->  

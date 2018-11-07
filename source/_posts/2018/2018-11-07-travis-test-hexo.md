@@ -77,8 +77,8 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
 
 将Hexo源码和发布代码放到一个仓库的不同分支，便于一一对应，也是对博客源码的备份。
 
-1. master分支： 用于编译后的文件，也就是用于展示的html源码
-2. hexo分支： 存markdown源码
+1. **master** 分支： 用于编译后的文件，也就是用于展示的html源码
+2. **hexo-source** 分支： 存markdown源码
 
 我使用Github Pages来展示自己的博客，并指定自定义域名。
 
@@ -88,7 +88,9 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
 
 ### hexo安装
 
-参考上一篇
+自行百度 hexo 安装，这里不做
+{% post_link markdown-learning-by-maxiang 点击这里查看这篇文章 %}
+
 
 ### 配置github
 1. 新增一个Access Token，[https://github.com/settings/tokens]()
@@ -139,7 +141,7 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
     
     branches:
       only:
-        - hexo
+        - hexo-source
     
     #####################################
     # 环境变量，把相应的键值改为你自己的就行了 #

@@ -2,9 +2,13 @@
 layout: post
 title: "swoole 做 httpserver 整合phalcon "
 description: ""
-category : "@web"
 date: "2017-03-22 00:00:02"
-tags: [ swoole,php,phalcon]
+categories:
+  - develop
+tags:
+  - swoole
+  - php
+  - phalcon
 ---
 从前blog移植过来，暂无摘要，后期再补
 <!-- more -->  

@@ -2,9 +2,12 @@
 layout: post
 title: "debian 以root权限运行图形程序"
 description: ""
-category : "@linux"
 date: "2017-03-17 00:00:01"
-tags: [ debian ,linux ]
+categories:
+  - linux
+tags:
+  - sudo
+  - debian
 ---
 从前blog移植过来，暂无摘要，后期再补
 <!-- more -->  

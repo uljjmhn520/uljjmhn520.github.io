@@ -2,9 +2,12 @@
 layout: post
 title: "window7 修改docker安装的machine 位置"
 description: ""
-category : "@linux"
 date: "2017-05-26 00:00:01"
-tags: []
+categories:
+  - develop
+tags:
+  - docker
+  - virtual
 ---
 从前blog移植过来，暂无摘要，后期再补
 <!-- more -->  

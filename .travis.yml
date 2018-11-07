@@ -20,7 +20,7 @@ after_script:
 
 branches:
   only:
-    - hexo
+    - hexo-source
 
 #####################################
 # 环境变量，把相应的键值改为你自己的就行了 #
