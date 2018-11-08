@@ -160,6 +160,8 @@ travis对github的开源仓库免费，正巧想写点啥子，正好笔者才�
 
     2. 去 travis 后台查看日志可以看到部署过程
     
+    3. 部署完成后，gitpage的静态文件也同步更新了
+    
 # Re参考连接
 
 1. [使用Travis CI持续部署Hexo博客](https://www.jianshu.com/p/5691815b81b6)
