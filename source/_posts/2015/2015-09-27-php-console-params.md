@@ -5,12 +5,11 @@ share: true
 toc: true
 date: "2015-09-27 00:00:01"
 categories:
-  - web
+  - develop
 
 tags:
   - php
   - cli
-  - params
 
 ---
 

@@ -8,7 +8,6 @@ categories:
   - develop
 tags:
   - bash
-  - learn
 ---
 
 > 这篇文章主要介绍了Shell脚本中实现切换用户并执行命令操作,看了示例代码就秒懂了,原来如此简单,需要的朋友可以参考下

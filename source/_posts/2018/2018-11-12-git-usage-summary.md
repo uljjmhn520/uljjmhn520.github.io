@@ -4,8 +4,9 @@ comments: true
 share: true
 toc: true
 categories:
-  - other
+  - git
 tags:
+  - git
   - other
 date: 2018-11-12 11:18:05
 ---

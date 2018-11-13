@@ -4,9 +4,9 @@ comments: true
 share: true
 toc: true
 categories:
-  - other
+  - develop
 tags:
-  - other
+  - jetbrains
 date: 2018-11-12 11:13:47
 ---
 

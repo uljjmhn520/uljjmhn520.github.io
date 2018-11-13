@@ -8,7 +8,8 @@ categories:
   - tools
 
 tags:
-  - 
+  - windows
+  - cygwin
 
 ---
 

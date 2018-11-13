@@ -9,7 +9,7 @@ categories:
 
 tags:
   -  jekyll
-  -  config
+  -  blog
 
 ---
 

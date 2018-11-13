@@ -5,7 +5,7 @@ share: true
 toc: true
 date: "2015-03-29 00:00:01"
 categories:
-  - web
+  - develop
 
 tags:
   - linux

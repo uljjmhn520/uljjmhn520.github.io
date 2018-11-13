@@ -5,6 +5,7 @@ share: true
 toc: true
 date: 2018-10-30 18:58:13
 categories:
+  - learn
 tags:
   - blog
   - hexo

@@ -5,7 +5,7 @@ share: true
 toc: true
 date: "2016-03-01 00:00:01"
 categories:
-  - web
+  - develop
 
 tags:
   - cdn

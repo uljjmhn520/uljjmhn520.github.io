@@ -9,6 +9,7 @@ categories:
 
 tags:
   - shadowsocks
+  - fq
 
 ---
 

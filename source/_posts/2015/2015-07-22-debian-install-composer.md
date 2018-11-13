@@ -5,11 +5,10 @@ share: true
 toc: true
 date: "2015-07-22 00:00:01"
 categories:
-  - web
+  - develop
 
 tags:
   - php
-  - debian
   - composer
 
 ---

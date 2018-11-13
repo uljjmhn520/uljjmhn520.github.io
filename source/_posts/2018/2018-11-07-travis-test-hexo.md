@@ -9,7 +9,7 @@ categories:
 tags:
   - travis
   - hexo
-  - learn
+  - CI
 ---
 
 试用一下持续集成服务 travis。

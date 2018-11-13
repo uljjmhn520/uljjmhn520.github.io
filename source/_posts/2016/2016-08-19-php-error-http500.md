@@ -5,7 +5,7 @@ share: true
 toc: true
 date: "2016-08-19 00:00:01"
 categories:
-  - web
+  - develop
 
 tags:
   -  php 

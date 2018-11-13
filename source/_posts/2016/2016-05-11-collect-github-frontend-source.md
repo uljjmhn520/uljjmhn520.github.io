@@ -5,7 +5,7 @@ share: true
 toc: true
 date: "2016-05-11 00:00:01"
 categories:
-  - web
+  - develop
 
 tags:
   - github
