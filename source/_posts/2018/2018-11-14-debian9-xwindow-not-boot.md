@@ -1,5 +1,5 @@
 ---
-title: debian9-xwindow-not-boot
+title: debian8升级到debian9后不能启动桌面
 comments: true
 share: true
 toc: true
