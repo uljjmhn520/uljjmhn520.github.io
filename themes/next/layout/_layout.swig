@@ -112,6 +112,14 @@
 <script type="text/javascript" src="/js/src/love.js"></script>
 
 
+<script>
+  console.log('%c本Blog仅用于个人学习',"color:orange; background:blue; font-size: 16pt");
+
+  console.log('%c内容中有部分资源引用自互联网',"color:orange; background:blue; font-size: 16pt");
+
+  console.log('%c如果不小心侵犯了您的权益，请联系 {{site.email}} 284141050@qq.com 处理相关信息',"color:orange; background:blue; font-size: 16pt");
+
+</script>
 
 </body>
 </html>
