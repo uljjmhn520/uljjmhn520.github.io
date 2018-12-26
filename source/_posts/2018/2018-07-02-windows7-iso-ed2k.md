@@ -9,6 +9,8 @@ categories:
 
 tags:
   - windows
+  - develop
+  - microsoft
 
 ---
 
@@ -50,9 +52,9 @@ tags:
 
 [SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426.ISO](ed2k://|file|SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426.ISO|1123452928|31087A00FF67D4F5B4CBF4AA07C3433B|/)
 
-# visualstudio
+# visual studio
 
-## language
+## language pak
 
 [Visual%20Studio%202013%20Language%20Pack](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202013%20Language%20Pack)
 
