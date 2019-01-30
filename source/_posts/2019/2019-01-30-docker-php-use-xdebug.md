@@ -18,8 +18,14 @@ date: 2019-01-30 11:09:43
 
 # 先放个链接
 
-转自
+## 问题
 
+* 没打断点也会暂停
+ 
+    有可能是phpstorm xdebug 设置里面选了 Break at first line in PHP Scripts.
+ 
+
+转自
 
 https://thecodingmachine.io/configuring-xdebug-phpstorm-docker
 
