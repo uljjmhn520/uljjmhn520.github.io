@@ -17,7 +17,11 @@ date: 2018-11-12 11:18:05
 # 常用功能
 
 ## 先放一个链接
-[https://blog.csdn.net/h247263402/article/details/74849182]()
+https://blog.csdn.net/h247263402/article/details/74849182
+
+## Commitizen
+
+http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html
 
 # 非常用功能
 
