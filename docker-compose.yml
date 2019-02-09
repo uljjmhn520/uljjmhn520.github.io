@@ -8,10 +8,7 @@ volumes:
       o: bind
 services:
   hexo-blog:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: "develop/node/hexo-blog"
+    image: "lopydev/hexo"
     container_name: "hexo_blog"
     ports:
       - 50000:4000
