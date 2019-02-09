@@ -1,0 +1,19 @@
+version: "2.1"
+volumes:
+  source:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD
+      o: bind
+services:
+  hexo-blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "develop/node/hexo-blog"
+    container_name: "hexo_blog"
+    ports:
+      - 50000:4000
+    volumes:
+      - source:/app
