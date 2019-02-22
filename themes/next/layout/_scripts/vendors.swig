@@ -5,36 +5,45 @@
     window.Promise = null;
   }
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-lazyload@1.9.7/jquery.lazyload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.2.2/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script>
 {% set js_vendors = {} %}
+{#
 {% set js_vendors.jquery      = 'jquery/index.js?v=2.1.3' %}
 {% set js_vendors.fastclick   = 'fastclick/lib/fastclick.min.js?v=1.0.6' %}
 {% set js_vendors.lazyload    = 'jquery_lazyload/jquery.lazyload.js?v=1.9.7' %}
 {% set js_vendors.velocity    = 'velocity/velocity.min.js?v=1.2.1' %}
 {% set js_vendors.velocity_ui = 'velocity/velocity.ui.min.js?v=1.2.1' %}
-
+#}
+{# --------------------    fancybox----------------------------- #}
 {% if theme.fancybox %}
-  {% set js_vendors.fancybox  = 'fancybox/source/jquery.fancybox.pack.js?v=2.1.5' %}
+  {# {% set js_vendors.fancybox  = 'fancybox/source/jquery.fancybox.pack.js?v=2.1.5' %} #}
+  <script src="https://cdn.jsdelivr.net/npm/jquery-fancybox@2.0.0/source/js/jquery.fancybox.pack.js"></script>
 {% endif %}
+{# --------------------    canvas_nest----------------------------- #}
 {% if theme.canvas_nest %}
-  {% set js_vendors.canvas_nest  = 'canvas-nest/canvas-nest.min.js' %}
+  {# {% set js_vendors.canvas_nest  = 'canvas-nest/canvas-nest.min.js' %} #}
+  <script src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1.0.0/canvas-nest.min.js"></script>
 {% endif %}
-
+{# --------------------    three_waves----------------------------- #}
 {% if theme.three_waves %}
   {% set js_vendors.three  = 'three/three.min.js' %}
   {% set js_vendors.three_waves  = 'three/three-waves.min.js' %}
 {% endif %}
-
+{# -------------------------   canvas_lines   ------------------------ #}
 {% if theme.canvas_lines %}
   {% set js_vendors.three  = 'three/three.min.js' %}
   {% set js_vendors.canvas_lines  = 'three/canvas_lines.min.js' %}
 {% endif %}
-
+{# -----------------------   canvas_sphere    -------------------------- #}
 {% if theme.canvas_sphere %}
   {% set js_vendors.three  = 'three/three.min.js' %}
   {% set js_vendors.canvas_sphere  = 'three/canvas_sphere.min.js' %}
 {% endif %}
-
+{# -----------------------   canvas_ribbon    -------------------------- #}
 {% if theme.canvas_ribbon.enable and theme.scheme === 'Pisces'%}
   {% set js_vendors.canvas_ribbon  = 'canvas-ribbon/canvas-ribbon.js' %}
 {% endif %}
