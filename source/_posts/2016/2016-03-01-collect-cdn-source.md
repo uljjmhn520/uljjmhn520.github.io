@@ -31,3 +31,5 @@ tags:
 - [bootstrap中国](http://www.bootcdn.cn/)
 
 - [cdnjs.net](http://cdnjs.net/)
+
+- [jsdelivr](https://www.jsdelivr.com/)

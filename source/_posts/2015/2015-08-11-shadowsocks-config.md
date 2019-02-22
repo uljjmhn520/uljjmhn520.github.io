@@ -235,6 +235,38 @@ systemctl enable shadowsocks-server@foo
 
 直接参考 SwitchySharp+shadowsocks-nodejs Windows 下配置介绍 的第二部分”设置浏览器代理扩展“即可。或者参考我的配置@2015.02.04文件即可，支持自动通过gfwlist自动切换。
 
+# 服务器开启bbr
+
+> 服务器内核版本要求 >=4.9
+
+```bash
+# 修改系统变量
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+
+# 保存生效
+sysctl -p
+
+# 查看内核是否已开启BBR
+sysctl net.ipv4.tcp_available_congestion_control
+
+# 查看BBR是否启动
+lsmod | grep bbr
+
+# 显示以下，表示成功 （数字不一定一样）
+#tcp_bbr                20480  14
+
+```
+
+
+# 服务器开启 tcp_fastopen
+
+> 服务器内核版本要求 >= 3.7.1
+
+```bash
+
+echo "net.ipv4.tcp_fastopen=3" >> /etc/sysctl.conf && sysctl -p
+```
 
 # 最后
 
@@ -248,4 +280,7 @@ https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
 https://github.com/gfwlist/gfwlist
 
-> 引用地址：https://wiki.archlinux.org/index.php/Shadowsocks_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29
+# 引用地址
+
+> https://wiki.archlinux.org/index.php/Shadowsocks_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29
+> https://www.moerats.com/archives/297/

@@ -45,8 +45,8 @@
           </div>
 
 			<!--my custom code begin-->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/jquery@3.1.0/dist/jquery.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
 			<script type="text/javascript">
 			  $("#sidebar").hover(function(){
 				$("#mydivshow").velocity('stop').velocity({opacity: 1});
