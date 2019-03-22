@@ -174,4 +174,16 @@ action = iptables[name=HTTP,port=http,protocol=tcp]
 
 [参见这里](https://www.jianshu.com/p/4fdec5794d08)
 
+### 解锁IP地址
+1).解锁特定的IP地址
+```bash
+ fail2ban-client set ssh-iptables unbanip 176.49.76.47
+```
+
+2).解锁所有的IP地址
+第一种方法：停止Fail2ban 服务 
+停止Fail2ban 服务，那么所有的IP地址都会被解锁。当你重启 Fail2ban，它会从/var/log/secure中找到异常的IP地址列表，如果这些异常地址的发生时间仍然在禁止时间内，那么Fail2ban会重新将这些IP地址禁止。 
+第二种方法：日志滚动
+
+
 
