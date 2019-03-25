@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 #url: https://wordzzzz.github.io/
 
-url: https://blog.lopy.win/
+url: https://blog.lopygo.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
