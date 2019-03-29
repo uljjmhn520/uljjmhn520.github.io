@@ -149,6 +149,7 @@ links_title: 友情链接
 # links_layout: block
 links_layout: inline
 links:
+  主站: https://www.lopygo.com
   WordZzzCsdn: http://blog.csdn.net/u011475210
   WordZzzGitPage: https://wordzzzz.github.io
 
