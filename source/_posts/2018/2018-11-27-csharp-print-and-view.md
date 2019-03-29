@@ -1,5 +1,5 @@
 ---
-title: csharp-print-and-view
+title: csharp软件打印和预览
 comments: true
 share: true
 toc: true
