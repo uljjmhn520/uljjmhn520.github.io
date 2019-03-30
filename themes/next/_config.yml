@@ -19,9 +19,12 @@ override: true
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
+  #small: /images/favicon-16x16-next.png
+  small: https://cdn.jsdelivr.net/gh/lopyfrontend/common@0.0.1/icon/favicon-16x16.png
+  #medium: /images/favicon-32x32-next.png
+  medium: https://cdn.jsdelivr.net/gh/lopyfrontend/common@0.0.1/icon/favicon-32x32.png
+  #apple_touch_icon: /images/apple-touch-icon-next.png
+  apple_touch_icon: https://cdn.jsdelivr.net/gh/lopyfrontend/common@0.0.1/icon/favicon-180x180.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
@@ -359,12 +362,12 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-swiftype_key: 
+swiftype_key:
 
 # Baidu Analytics ID
 baidu_analytics: 52567a573db99b54cccb66af4c41822b
 
-baidu-site-verification: 
+baidu-site-verification:
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -408,7 +411,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: 
+livere_uid:
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -546,8 +549,8 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: 
-  app_key: 
+  app_id:
+  app_key:
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId

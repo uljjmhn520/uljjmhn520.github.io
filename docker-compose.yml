@@ -11,6 +11,6 @@ services:
     image: "lopydev/hexo"
     container_name: "hexo_blog"
     ports:
-      - 50000:4000
+      - 4000:4000
     volumes:
       - source:/app
