@@ -7,7 +7,7 @@ volumes:
       device: $PWD
       o: bind
 services:
-  hexo-blog:
+  site:
     image: "lopydev/hexo"
     container_name: "hexo_blog"
     ports:
