@@ -29,13 +29,30 @@ date: 2019-07-01 03:17:19
 
 * aliyun
     ```bash
-    
     cat <<eof > /etc/apt/source.list
+    
     deb http://mirrors.aliyun.com/debian stretch main non-free contrib
     deb-src http://mirrors.aliyun.com/debian stretch main non-free contrib
+    
     deb http://mirrors.aliyun.com/debian stretch-updates main non-free contrib
     deb-src http://mirrors.aliyun.com/debian stretch-updates main non-free contrib
     eof
+    ```
+* us常用
+    
+    ```bash
+    cat <<eof > /etc/apt/source.list
+    
+    deb http://ftp.us.debian.org/debian/ stretch main
+    deb-src http://ftp.us.debian.org/debian/ stretch main
+    
+    deb http://security.debian.org/debian-security stretch/updates main
+    deb-src http://security.debian.org/debian-security stretch/updates main
+    
+    deb http://ftp.us.debian.org/debian/ stretch-updates main
+    deb-src http://ftp.us.debian.org/debian/ stretch-updates main
+    eof
+  
     ```
 * others
     ```bash
