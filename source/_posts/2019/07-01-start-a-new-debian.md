@@ -337,3 +337,24 @@ npm install -g cz-conventional-changelog
 echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 ```
+
+## termius
+
+这是[官网](https://www.termius.com/linux)
+
+```bash
+cd ~/tmp/
+
+wget https://www.termius.com/download/linux/Termius.deb
+
+sudo dpkg -i Termius.deb
+
+apt-get install -f
+
+# 应该用 gdebi Termius.deb 应该也可以，下次试试
+
+```
+
+## git工具
+
+待续
