@@ -314,7 +314,7 @@ dpkg -i anydesk_5.1.1-1_amd64.deb
 cd ~/
 git clone https://github.com/nvm-sh/nvm.git .nvm
 cd ~/.nvm
-./nvm.sh
+. nvm.sh
 
 cat <<eof >> ~/.bashrc
 export NVM_DIR="$HOME/.nvm"
@@ -357,4 +357,19 @@ apt-get install -f
 
 ## git工具
 
-待续
+我习惯用 meld
+
+```bash
+# diff
+git config --global diff.tool meld
+
+git config --global difftool.meld.cmd "meld \"\$LOCAL\" \"\$REMOTE\""
+
+# merge
+git config --global merge.tool meld
+
+```
+
+
+
+## 待续
