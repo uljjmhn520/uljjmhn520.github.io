@@ -1,16 +1,18 @@
 ---
-title: express-log4js-in-pm2
+title: pm2里跑的cluster模式里用log4js不工作
 comments: true
 share: true
 toc: true
 categories:
-  - other
+  - develop
 tags:
-  - other
+  - develop
+  - node
+  - js
 date: 2019-07-18 04:14:15
 ---
 
-这不是我第一次踩这个坑了，因为node不是太常用，有时只是遇到问题了查一下就完了
+这不是我第一次踩这个坑了，因为node不是太常用，有时只是遇到问题了查一下就完了。md，又遇到了，决定记下来
 <!-- more -->  
 
 
