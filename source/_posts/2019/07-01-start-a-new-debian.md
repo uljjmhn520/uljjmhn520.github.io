@@ -370,6 +370,40 @@ git config --global merge.tool meld
 
 ```
 
+## python
+
+
+```bash
+curl https://pyenv.run | bash
+```
+
+将以下写入 `.bashrc`
+
+```bash
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# 目前重庆这边不支持ipv6，如果报相关错误就把这条加上
+export PYTHON_CONFIGURE_OPTS="--disable-ipv6"
+
+```
+
+或一句命令
+
+```bash
+cat <<EOF >> ~/.bashrc
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYTHON_CONFIGURE_OPTS="--disable-ipv6"
+EOF
+
+```
+
+其它问题
+
+> https://github.com/pyenv/pyenv/wiki/common-build-problems
 
 
 ## 待续
