@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-10-30-hexo-add-local-search/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>为 hexo-next 增加搜索功能</title>
+        <pubTime>2018-10-30T10:58:13.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="learn" url="https://blog.lopygo.com/categories/learn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-02-20-debian-install-fcitx-wubi/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 安装fcitx五笔拼音</title>
+        <pubTime>2015-02-19T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>fcitx</tag>
+         
+        <tag>wubi</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-03-20-mysql-updateupdate/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySql更新多条数据不建议使用UPDATE语句</title>
+        <pubTime>2015-03-19T16:00:01.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-05-19-debian-apt-source/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的debian常用apt源</title>
+        <pubTime>2015-05-18T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-05-26-mysqli-learn/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysqli的参数化查询，学习一下，马上就用</title>
+        <pubTime>2015-05-25T16:00:01.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>safety</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-05-29-zhengzebug/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>正则表达式\w并不完全等于[A-Za-z0-9]</title>
+        <pubTime>2015-05-28T16:00:01.000Z</pubTime>
+        
+        <tag>bug</tag>
+         
+        <tag>preg</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-06-18-debian-set-timezone/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 修改时区</title>
+        <pubTime>2015-06-17T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>timezone</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-07-22-debian-install-composer/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>deban安装composer</title>
+        <pubTime>2015-07-21T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>composer</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/08-11-p-shadowsocks-config/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>shadowsocks常用配置</title>
+        <pubTime>2015-08-10T16:00:01.000Z</pubTime>
+        
+        <tag>shadowsocks</tag>
+         
+        <tag>fq</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-08-17-ubuntu-vim-gvim/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 15.04 gVim安装及设置</title>
+        <pubTime>2015-08-16T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>vim</tag>
+         
+        <tag>gvim</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-09-01-debian-without-root-login/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>[转]设置 Debian/Ubuntu 不允许使用 root ssh 登陆</title>
+        <pubTime>2015-08-31T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>login</tag>
+         
+        <tag>root</tag>
+         
+        <tag>ssh</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-09-09-php-json-mysql/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>php中的json转码问题以及保存在mysql中出现的问题</title>
+        <pubTime>2015-09-08T16:00:01.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>php</tag>
+         
+        <tag>json</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-09-18-debian-install-lnmp/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Debian apt-get 一键安装配置搭建最新LNMP</title>
+        <pubTime>2015-09-17T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-09-22-debian-version-diff/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian区分版本</title>
+        <pubTime>2015-09-21T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-09-27-php-console-params/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>[转]在命令行下运行PHP脚本[带参数]的方法</title>
+        <pubTime>2015-09-26T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>cli</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-09-28-php-json-key/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP处理JSON字符串key缺少双引号的解决方法</title>
+        <pubTime>2015-09-27T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>json</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-10-04-debian-install-phpredis/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 安装phpredis 扩展</title>
+        <pubTime>2015-10-03T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>php</tag>
+         
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-10-04-debian-install-redis-mf/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>[转]debian 编译安装redis</title>
+        <pubTime>2015-10-03T16:00:03.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-10-04-debian-install-redis/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 安装并启动redis</title>
+        <pubTime>2015-10-03T16:00:02.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-10-14-mysql-error-50544/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Headers and client library minor version mismatch. Headers:50544 Library:506</title>
+        <pubTime>2015-10-13T16:00:01.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-10-28-php-fpm-is-masked/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Unit php5-fpm.service is masked</title>
+        <pubTime>2015-10-27T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>cli</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-11-07-windows-cygwin-apt/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows下安装Cygwin及包管理器apt-cyg</title>
+        <pubTime>2015-11-06T16:00:01.000Z</pubTime>
+        
+        <tag>windows</tag>
+         
+        <tag>cygwin</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://blog.lopygo.com/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-11-27-debian-openjdk/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian安装Openjdk7</title>
+        <pubTime>2015-11-26T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>openjdk</tag>
+         
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-11-28-linux-chm-viewer/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>几款LINUX下的CHM查看器</title>
+        <pubTime>2015-11-27T16:00:01.000Z</pubTime>
+        
+        <tag>reader</tag>
+         
+        <tag>chm</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://blog.lopygo.com/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-03-01-collect-cdn-source/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>收集一些cdn公共库</title>
+        <pubTime>2016-02-29T16:00:01.000Z</pubTime>
+        
+        <tag>cdn</tag>
+         
+        <tag>js</tag>
+         
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-05-11-collect-github-frontend-source/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>在github等开源网站收集前端框架</title>
+        <pubTime>2016-05-10T16:00:01.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>frontend</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-06-18-mark-down-learn/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>MarkDown初步尝试</title>
+        <pubTime>2016-06-17T16:00:01.000Z</pubTime>
+        
+        <tag>md</tag>
+         
+         
+           
+             
+              <breadCrumb title="lessons" url="https://blog.lopygo.com/categories/lessons/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-06-28-linux-contains-a-file/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>linux (debian) 启动报错 contains a file system with errors.check forced</title>
+        <pubTime>2016-06-27T16:00:01.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>error</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-07-29-linux-new-user/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>linux 新用户不能tab自动补全、退格变^H 等问题</title>
+        <pubTime>2016-07-28T16:00:01.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-08-01-phalcon-redirect-send/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>phalcon 的跳转问题</title>
+        <pubTime>2016-07-31T16:00:01.000Z</pubTime>
+        
+        <tag>phalcon</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-08-17-debian-7-php-64-error/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 7 64位编译php5 的注意点</title>
+        <pubTime>2016-08-16T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2016/2016-2016-08-19-php-error-http500/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP自动捕捉页面500错误示例</title>
+        <pubTime>2016-08-18T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>error</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-02-20-debian-realtek-driver/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian realtek 无线网卡安装</title>
+        <pubTime>2017-02-19T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>network</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-03-17-debian-run-graphics-program-at-root/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 以root权限运行图形程序</title>
+        <pubTime>2017-03-16T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>sudo</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-03-22-debian-iptables-configure/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 的 iptables 的常用配置</title>
+        <pubTime>2017-03-21T16:00:01.000Z</pubTime>
+        
+        <tag>iptables</tag>
+         
+        <tag>config</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-05-26-docker-for-win-alter-vdi-path/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>window7 修改docker安装的machine 位置</title>
+        <pubTime>2017-05-25T16:00:01.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-12-01-ionic-hot-update/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>ionic hot update</title>
+        <pubTime>2017-11-30T16:00:01.000Z</pubTime>
+        
+        <tag>ionic</tag>
+         
+        <tag>node</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-05-17-debian9-install-vboxadditions/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>vbox中debian9安装增强功能和文件共享</title>
+        <pubTime>2018-05-16T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>virtualbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-05-17-debian9-lnmp/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian9 安装 lnmp</title>
+        <pubTime>2018-05-16T16:00:02.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-05-30-winserver-2003-r2-sp2-vol-enterprise/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>winserver 2003 r2 sp2 vol 企业版</title>
+        <pubTime>2018-05-29T16:00:01.000Z</pubTime>
+        
+        <tag>windows</tag>
+         
+        <tag>server</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://blog.lopygo.com/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-06-28-jekyll-panxw-blog/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>jekyll panxw blog</title>
+        <pubTime>2018-06-28T10:07:32.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="learn" url="https://blog.lopygo.com/categories/learn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-07-02-windows7-iso-ed2k/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>整理微软的一些下载地址</title>
+        <pubTime>2018-07-02T14:32:37.000Z</pubTime>
+        
+        <tag>windows</tag>
+         
+        <tag>develop</tag>
+         
+        <tag>microsoft</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://blog.lopygo.com/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-08-01-ionic3-gps/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>ionic3 gps</title>
+        <pubTime>2018-08-01T06:37:21.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>ionic</tag>
+         
+        <tag>typescript</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-10-29-win7-install-vagrant/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>win7 安装vagrant</title>
+        <pubTime>2018-10-29T10:15:21.000Z</pubTime>
+        
+        <tag>windows</tag>
+         
+        <tag>vagrant</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-02-20-jekyll-bootstrap-start-config/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>jekyll bootstrap 的搭建</title>
+        <pubTime>2015-02-19T16:00:02.000Z</pubTime>
+        
+        <tag>jekyll</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-07-travis-test-hexo/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>以编译hexo的方式试用travis</title>
+        <pubTime>2018-11-07T07:14:22.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>travis</tag>
+         
+        <tag>CI</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-08-bash-switch-user/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>【转】Shell脚本中实现切换用户并执行命令操作</title>
+        <pubTime>2018-11-08T01:30:41.000Z</pubTime>
+        
+        <tag>bash</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-12-git-usage-summary/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git用法总结</title>
+        <pubTime>2018-11-12T03:18:05.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>other</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="https://blog.lopygo.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-12-jetbrains-toolbox-install/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>jetbrains toolbox的安装</title>
+        <pubTime>2018-11-12T03:13:47.000Z</pubTime>
+        
+        <tag>jetbrains</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-14-debian9-install-xmind/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian9安装xmind8</title>
+        <pubTime>2018-11-14T12:06:27.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-14-debian9-xwindow-not-boot/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian8升级到debian9后不能启动桌面</title>
+        <pubTime>2018-11-14T10:43:27.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-23-android-webview-capture-package/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>安卓抓包webview</title>
+        <pubTime>2018-11-23T08:55:55.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>android</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-27-csharp-print-and-view/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>csharp软件打印和预览</title>
+        <pubTime>2018-11-27T08:29:59.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>csharp</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-11-29-ssh-channel/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>ssh隧道</title>
+        <pubTime>2018-11-29T15:17:20.000Z</pubTime>
+        
+        <tag>ssh</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2018/2018-2018-12-11-php-cli-apc/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>php-cli模式下使用apcu的问题</title>
+        <pubTime>2018-12-11T02:13:27.000Z</pubTime>
+        
+        <tag>other</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-05-15-the-pit-with-flutter/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>在flutter里踩过的坑</title>
+        <pubTime>2019-05-15T00:22:06.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>flutter</tag>
+         
+        <tag>language</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-05-23-nginx-option/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>nginx的一些配置整理一下</title>
+        <pubTime>2019-05-23T09:54:16.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-07-05-use-ffmpeg/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>ffmpeg使用</title>
+        <pubTime>2019-07-05T05:12:47.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-07-20-log-a-publish-in-npm/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>记一次npm的发布</title>
+        <pubTime>2019-07-20T01:46:37.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>node</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-09-26-node-source-code-compile/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>nodejs源码加密或混淆</title>
+        <pubTime>2019-09-25T17:59:27.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-09-26-pm2-auto-boot-in-windows/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>【转】pm2 设置自动启动服务（Windows系统）</title>
+        <pubTime>2019-09-25T17:54:14.000Z</pubTime>
+        
+        <tag>other</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-11-09-kaniko-learn/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>学习一下kaniko</title>
+        <pubTime>2019-11-09T04:15:44.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+        <tag>develop</tag>
+         
+        <tag>gitlab-ci</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-11-29-node-babel-es6-7-8/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>nodejs从用es6/7/8写项目到发布</title>
+        <pubTime>2019-11-29T08:03:58.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/12-20-p-vscode-code-server-test/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>尝试一下code-server</title>
+        <pubTime>2019-12-20T10:38:50.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>ide</tag>
+         
+        <tag>vscode</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-12-24-vscode-test-n/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>第n次尝试vscode</title>
+        <pubTime>2019-12-23T23:07:53.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>ide</tag>
+         
+        <tag>vscode</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-2019-01-30-docker-php-use-xdebug/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>php在docker环境下的远程xdebug</title>
+        <pubTime>2019-01-30T03:09:43.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>docker</tag>
+         
+        <tag>develop</tag>
+         
+        <tag>debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-2019-03-03-debian-charset-words-zhcn-program/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian系统下各种中文显示、乱码、输入等问题</title>
+        <pubTime>2019-03-03T03:04:25.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>language</tag>
+         
+        <tag>charset</tag>
+         
+        <tag>input</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopygo.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-2019-03-22-linux-server-security/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>linux基本安全</title>
+        <pubTime>2019-03-22T01:40:15.000Z</pubTime>
+        
+        <tag>other</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-01-15-full-remote-develop/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>一个完整的远程开发环境</title>
+        <pubTime>2020-01-15T10:28:33.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>js</tag>
+         
+        <tag>develop</tag>
+         
+        <tag>other</tag>
+         
+        <tag>ide</tag>
+         
+        <tag>vscode</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-03-07-compile-vscode-for-web/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>从源码编译vscode，用于web端vscode</title>
+        <pubTime>2020-03-07T10:44:26.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>ide</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-03-30-use-alias-on-sudo/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>sudo的时候用alias</title>
+        <pubTime>2020-03-29T20:56:50.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-04-12-nginx-global-variable/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>nginx全局变量</title>
+        <pubTime>2020-04-11T22:37:31.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-04-20-syscall-in-go-use-hk-api/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>以海康威视摄像头sdk来试用一下go的sycall</title>
+        <pubTime>2020-04-20T00:57:49.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>golang</tag>
+         
+        <tag>dll</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-04-27-remote-desktop-without-display/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>teamviewer、anydesk等连接没有插显示器的debian系统时会卡顿的问题</title>
+        <pubTime>2020-04-27T08:23:19.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>develop</tag>
+         
+        <tag>teamviewer</tag>
+         
+        <tag>anydesk</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-05-20-zap-test/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>试一下zap</title>
+        <pubTime>2020-05-20T15:48:14.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>golang</tag>
+         
+        <tag>logging</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-11-09-pve01/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>玩一下pve虚拟机呢</title>
+        <pubTime>2020-11-08T23:23:05.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>virtual</tag>
+         
+        <tag>pve</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-11-29-exe-to-service/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows下把exe以服务方式运行</title>
+        <pubTime>2020-11-29T05:23:16.000Z</pubTime>
+        
+        <tag>windows</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-03-29-linux-iptables-setup/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux中iptables设置详细</title>
+        <pubTime>2015-03-28T16:00:01.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>iptables</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-03-22-swoole-httpserver-attention/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>swoole 做 httpserver 整合phalcon </title>
+        <pubTime>2017-03-21T16:00:02.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>phalcon</tag>
+         
+        <tag>swoole</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-07-01-start-a-new-debian/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>start a new debian</title>
+        <pubTime>2019-06-30T19:17:19.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopygo.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-07-18-express-log4js-in-pm2/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>pm2里跑的cluster模式里用log4js不工作</title>
+        <pubTime>2019-07-17T20:14:15.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>node</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2019/2019-07-30-learn-dl-for-a-noob/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>纯新手自学入门机器/深度学习指南（附一个月速成方案）</title>
+        <pubTime>2019-07-30T09:01:54.000Z</pubTime>
+        
+        <tag>develop</tag>
+         
+        <tag>dl</tag>
+         
+        <tag>learn</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2020/2020-03-06-openvpn-over-ss/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>openvpn通过ss隐藏流量</title>
+        <pubTime>2020-03-06T11:54:22.000Z</pubTime>
+        
+        <tag>network</tag>
+         
+        <tag>develop</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2017/2017-2017-03-02-js-php-rsa/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>rsatitle</title>
+        <pubTime>2017-03-01T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>js</tag>
+         
+        <tag>rsa</tag>
+         
+         
+           
+             
+              <breadCrumb title="develop" url="https://blog.lopygo.com/categories/develop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopygo.com/2015/2015-2015-12-05-node-js-learn/</loc>
+    <lastmod>2021-06-14T13:09:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Node初学者入门，一本全面的NodeJS教程</title>
+        <pubTime>2015-12-04T16:00:01.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+             
+              <breadCrumb title="lessons" url="https://blog.lopygo.com/categories/lessons/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+</urlset>
