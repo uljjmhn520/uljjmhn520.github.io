@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>码奴假娃</title>
+  
+  <subtitle>裸皮狗</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.lopygo.com/"/>
+  <updated>2025-09-16T17:33:20.688Z</updated>
+  <id>https://blog.lopygo.com/</id>
+  
+  <author>
+    <name>Tony Java Z</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ventoy-verification-failed-0x1a</title>
+    <link href="https://blog.lopygo.com/2025/2025-09-05-ventoy-verification-failed-0x1a/"/>
+    <id>https://blog.lopygo.com/2025/2025-09-05-ventoy-verification-failed-0x1a/</id>
+    <published>2025-09-04T17:42:55.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>abstract of this post<br><a id="more"></a><br>content of this post<br><a href="https://blog.csdn.net/weixin_52326756/article/details/148444717" target="_blank" rel="noopener">https://blog.csdn.net/weixin_52326756/article/details/148444717</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;abstract of this post&lt;br&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="other" scheme="https://blog.lopygo.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>display-vm-on-pve-arm</title>
+    <link href="https://blog.lopygo.com/2025/2025-08-18-display-vm-on-pve-arm/"/>
+    <id>https://blog.lopygo.com/2025/2025-08-18-display-vm-on-pve-arm/</id>
+    <published>2025-08-17T16:05:16.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>abstract of this post<br><a id="more"></a><br>content of this post</p><p>有些系统支持</p><p>硬件，添加，串口</p><p>display 选择 串口</p><h1 id="openwrt-vm"><a href="#openwrt-vm" class="headerlink" title="openwrt vm"></a>openwrt vm</h1><p><a href="https://medium.com/@aj.abdelwahed/openwrt-on-proxmox-ve-turn-your-raspberry-pi-into-a-networking-powerhouse-ee61bd2f342c" target="_blank" rel="noopener">https://medium.com/@aj.abdelwahed/openwrt-on-proxmox-ve-turn-your-raspberry-pi-into-a-networking-powerhouse-ee61bd2f342c</a></p><h1 id="openwrt-lxc1"><a href="#openwrt-lxc1" class="headerlink" title="openwrt lxc1"></a>openwrt lxc1</h1><p>这上面说的，好像不行</p><p><a href="https://openwrt.org/docs/guide-user/virtualization/lxc" target="_blank" rel="noopener">https://openwrt.org/docs/guide-user/virtualization/lxc</a></p><h1 id="openwrt-lxc2"><a href="#openwrt-lxc2" class="headerlink" title="openwrt lxc2"></a>openwrt lxc2</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Setting Up OpenWRT on a Virtual Machine with Proxmox</span></span><br><span class="line"><span class="comment"># Based on: https://community.bigbeartechworld.com/t/setting-up-openwrt-on-a-virtual-machine-with-proxmox/257</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set your wished version:</span></span><br><span class="line"><span class="built_in">export</span> VER=<span class="string">"24.10"</span></span><br><span class="line"><span class="built_in">export</span> ARCH=<span class="string">"arm64"</span></span><br><span class="line"><span class="built_in">export</span> INDEX_URL=<span class="string">"https://images.linuxcontainers.org/images/openwrt/<span class="variable">$VER</span>/<span class="variable">$ARCH</span>/default"</span></span><br><span class="line"><span class="comment">#export BUILDDATE=$(date -d "yesterday" '+%Y%m%d')</span></span><br><span class="line"><span class="built_in">export</span> BUILDDATE=$(curl -sL <span class="variable">$INDEX_URL</span> | grep <span class="string">"&lt;a href="</span> | sed -E <span class="string">'s/.*&lt;a href="([^"]+)".*/\1/'</span> | sort | tail -n 1 | tr -d \/)</span><br><span class="line"><span class="built_in">export</span> BD_URL=<span class="string">"<span class="variable">$INDEX_URL</span>/<span class="variable">$BUILDDATE</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>; <span class="built_in">echo</span> <span class="string">"[*] Setting Up OpenWRT Version <span class="variable">$VER</span> on a Virtual Machine with Proxmox"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"[*] Downloading by <span class="variable">$BD_URL</span>/ "</span></span><br><span class="line">sleep 2</span><br><span class="line">wget <span class="variable">$BD_URL</span>/rootfs.tar.xz -O /var/lib/vz/template/cache/OpenWrt-<span class="variable">$VER</span>.tar.xz</span><br><span class="line"><span class="comment"># lvm disk: 1G - RAM 1G - CPU 1Core 64bit</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">pct create 202 /var/lib/vz/template/cache/OpenWrt-<span class="variable">$VER</span>.tar.xz --arch <span class="variable">$ARCH</span> --hostname OpenWrt-<span class="variable">$VER</span> --rootfs <span class="built_in">local</span>-lvm:1 --memory 1024 --cores 1 --ostype unmanaged --unprivileged 1</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"</span></span><br><span class="line"><span class="string">Add network on interface and setup network file via dhcp </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">(vi /etc/config/network):</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">config interface 'wrtb'</span></span><br><span class="line"><span class="string">        option type 'bridge'</span></span><br><span class="line"><span class="string">        option ifname 'eth0'</span></span><br><span class="line"><span class="string">        option proto 'dhcp'</span></span><br><span class="line"><span class="string">"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> 0;</span><br></pre></td></tr></table></figure><h1 id="immortalwrt"><a href="#immortalwrt" class="headerlink" title="immortalwrt"></a>immortalwrt</h1><h2 id="lxc"><a href="#lxc" class="headerlink" title="lxc"></a>lxc</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://downloads.immortalwrt.org/releases/24.10.1/targets/armsr/armv8/immortalwrt-24.10.1-armsr-armv8-rootfs.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pct create 700 /var/lib/vz/template/cache/immortalwrt-24.10.1-armsr-armv8-rootfs.tar.gz --arch arm64 --hostname immortalwrt --rootfs <span class="built_in">local</span>:1 --memory 512 --cores 1 --ostype unmanaged --unprivileged 1</span><br></pre></td></tr></table></figure><p>注意，我应该是遇到两次了，lxc运行后，dnsmq 不能启动导致不能上网</p><p>比如 ping baidu.com<br>bad address “baidu.com”</p><p>/etc/init.d/dnsmasq status<br>not running</p><p>解决<br><a href="https://github.com/immortalwrt/immortalwrt/issues/1588" target="_blank" rel="noopener">https://github.com/immortalwrt/immortalwrt/issues/1588</a></p><p>vim /etc/init.d/dnsmasq</p><p>删除或注释掉这几句</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#       procd_add_jail dnsmasq ubus log                                                                                     </span><br><span class="line">#       procd_add_jail_mount $CONFIGFILE $DHCPBOGUSHOSTNAMEFILE $DHCPSCRIPT $DHCPSCRIPT_DEPENDS                             </span><br><span class="line">#       procd_add_jail_mount $EXTRA_MOUNT $RFC6761FILE $TRUSTANCHORSFILE                                                    </span><br><span class="line">#       procd_add_jail_mount $dnsmasqconffile $dnsmasqconfdir $resolvdir $user_dhcpscript                                   </span><br><span class="line">#       procd_add_jail_mount /etc/passwd /etc/group /etc/TZ /etc/hosts /etc/ethers                                          </span><br><span class="line">#       procd_add_jail_mount_rw /var/run/dnsmasq/ $leasefile                                                                </span><br><span class="line">#       case &quot;$logfacility&quot; in */*)                                                                                         </span><br><span class="line">#               [ ! -e &quot;$logfacility&quot; ] &amp;&amp; touch &quot;$logfacility&quot;                                                             </span><br><span class="line">#               procd_add_jail_mount_rw &quot;$logfacility&quot;                                                                      </span><br><span class="line">#       esac                                                                                                                </span><br><span class="line">#       [ -e &quot;$hostsfile&quot; ] &amp;&amp; procd_add_jail_mount $hostsfile</span><br></pre></td></tr></table></figure><h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p>临时设置ip</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ip addr add 192.168.122.94/24 dev enp6s19</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;abstract of this post&lt;br&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="other" scheme="https://blog.lopygo.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>arm-pve-issue</title>
+    <link href="https://blog.lopygo.com/2025/2025-08-17-arm-pve-issue/"/>
+    <id>https://blog.lopygo.com/2025/2025-08-17-arm-pve-issue/</id>
+    <published>2025-08-17T14:12:08.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>arm的pve还是太小众 。搞了个e20c来玩pve，安装好了遇到了问题，在gemini的帮助下解决了</p><a id="more"></a>  <h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><p>radxa e20c 4g+32g</p><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p><a href="https://github.com/ophub/amlogic-s9xxx-armbian" target="_blank" rel="noopener">armbian</a><br>Armbian_25.11.0_rockchip_e20c_bookworm_5.10.160_server_2025.08.11</p><p>(由于该项目几乎每周都会编译新的固件，链接会失效，就不挂链接了)</p><h2 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h2><p>然后我使用命令更新内核到<code>6.1</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">armbian-update -k 6.1.115</span><br></pre></td></tr></table></figure><p>注意，内核也有可能因为更新的原因而删除旧的内核，可以去以下链接查看</p><p><a href="https://github.com/ophub/kernel/releases/" target="_blank" rel="noopener">https://github.com/ophub/kernel/releases/</a></p><p>e20c的目前支持的内核版本</p><p><a href="https://github.com/ophub/kernel/releases/tag/kernel_rk35xx" target="_blank" rel="noopener">https://github.com/ophub/kernel/releases/tag/kernel_rk35xx</a></p><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>在安装pve之前，我执行了<code>armbian-upgrade</code>把软件都更新到了最新版本</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote><p>注意1，armbian13 (trixie) 目前（2025-08-17）是不支持安装pve9的。尽管文档中写的支持</p></blockquote><blockquote><p>注意2，以前可以使用 <code>armbian-software</code> 直接选<code>308</code> 安装pve，现在也不行了。直接表现为里面那个仓库都404了</p></blockquote><p>项目地址</p><p><a href="https://github.com/jiangcuo/pxvirt" target="_blank" rel="noopener">https://github.com/jiangcuo/pxvirt</a></p><p>中文文档：<br><a href="https://docs.pxvirt.lierfang.com/zh/installfromdebian.html" target="_blank" rel="noopener">https://docs.pxvirt.lierfang.com/zh/installfromdebian.html</a></p><p>就几句命令就安装好了</p><h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><blockquote><p>注意，我解决了问题以后，没能复现问题，但在解决之前是100%复现了问题的，估计是刷机没有清理的问题。。。</p></blockquote><p>安装完成后，能看到版本 <code>pveversion</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pve-manager/8.4.10/01d2d7dd794a93d5 (running kernel: 6.1.115-rk35xx-ophub)</span><br></pre></td></tr></table></figure><p>端口也能正常监听，但是不能访问</p><p>root@pxvirt:~# netstat -ano | grep 8006</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcp6       0      0 :::8006                 :::*                    LISTEN      off (0.00/0/0)</span><br></pre></td></tr></table></figure><p>问了gemini，让按步骤排除问题</p><p>1</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status pveproxy pvedaemon</span><br></pre></td></tr></table></figure><p>2<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl status pve-firewall</span><br><span class="line">pve-firewall status</span><br></pre></td></tr></table></figure></p><p>3 </p><p>检查证书问题</p><p>开始检查</p><p>我第一步就检查出了问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status pveproxy pvedaemon</span><br></pre></td></tr></table></figure><p>以下输出</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">● pveproxy.service - PVE API Proxy Server</span><br><span class="line"></span><br><span class="line">     Loaded: loaded (/lib/systemd/system/pveproxy.service; enabled; preset: enabled)</span><br><span class="line"></span><br><span class="line">     Active: active (running) since Sun 2025-08-17 05:51:43 PDT; 10min ago</span><br><span class="line"></span><br><span class="line">    Process: 1624 ExecStartPre=/usr/bin/pvecm updatecerts --silent (code=exited, status=1/FAILURE)</span><br><span class="line"></span><br><span class="line">    Process: 1630 ExecStart=/usr/bin/pveproxy start (code=exited, status=0/SUCCESS)</span><br><span class="line"></span><br><span class="line">   Main PID: 1662 (pveproxy)</span><br><span class="line"></span><br><span class="line">      Tasks: 3 (limit: 4664)</span><br><span class="line"></span><br><span class="line">     Memory: 152.7M</span><br><span class="line"></span><br><span class="line">        CPU: 1min 32.921s</span><br><span class="line"></span><br><span class="line">     CGroup: /system.slice/pveproxy.service</span><br><span class="line"></span><br><span class="line">             ├─1662 pveproxy</span><br><span class="line"></span><br><span class="line">             ├─3629 &quot;pveproxy worker&quot;</span><br><span class="line"></span><br><span class="line">             └─3630 &quot;pveproxy worker&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[1662]: starting 1 worker(s)</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[1662]: worker 3629 started</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[3629]: /etc/pve/local/pve-ssl.pem: failed to use local certificate chain (cert_file or cert) at /usr/share/perl5/PVE/APIServer/AnyEvent.pm line 2088.</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[3606]: worker exit</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[3607]: worker exit</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[1662]: worker 3606 finished</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[1662]: starting 1 worker(s)</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[1662]: worker 3607 finished</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[1662]: worker 3630 started</span><br><span class="line"></span><br><span class="line">Aug 17 06:02:04 pxvirt pveproxy[3630]: /etc/pve/local/pve-ssl.pem: failed to use local certificate chain (cert_file or cert) at /usr/share/perl5/PVE/APIServer/AnyEvent.pm line 2088.</span><br></pre></td></tr></table></figure><p>注意到这句，说明是证书问题</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/pve/local/pve-ssl.pem: failed to use local certificate chain (cert_file or cert) at /usr/share/perl5/PVE/APIServer/AnyEvent.pm line 2088.</span><br></pre></td></tr></table></figure><p>然后我输入 <code>pvecm updatecerts</code> 命令更新证书，但更新失败</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Could not read private key from /etc/pve/priv/pve-root-ca.key</span><br><span class="line"></span><br><span class="line">generating pve root certificate failed:</span><br><span class="line"></span><br><span class="line">command &apos;faketime yesterday openssl req -batch -days 3650 -new -x509 -nodes -key /etc/pve/priv/pve-root-ca.key -out /etc/pve/pve-root-ca.pem -subj &apos;/CN=Proxmox Virtual Environment/OU=f02937c1-6c62-490d-890b-47fb7699dae2/O=PVE Cluster Manager CA/&apos;&apos; failed: exit code 1</span><br></pre></td></tr></table></figure><p>然后，我发现 <code>/etc/pve/priv/pve-root-ca.key</code> 和 <code>/etc/pve/pve-root-ca.pem</code> 文件的内容是空的</p><!-- systemctl stop pve-cluster --><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop pvedaemon</span><br><span class="line">systemctl stop pveproxy</span><br></pre></td></tr></table></figure><p>然后我执行了 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br><span class="line">rm -rf /etc/pve/priv/pve-root-ca.key</span><br><span class="line">rm -rf /etc/pve/pve-root-ca.pem</span><br><span class="line">rm -rf /etc/pve/pve-www.key</span><br><span class="line">rm -rf /etc/pve/authkey.pub</span><br></pre></td></tr></table></figure><p>再执行了这个 <code>pvecm updatecerts --forse</code></p><h1 id="附上所有安装命令"><a href="#附上所有安装命令" class="headerlink" title="附上所有安装命令"></a>附上所有安装命令</h1><h2 id="第一次连ssh"><a href="#第一次连ssh" class="headerlink" title="第一次连ssh"></a>第一次连ssh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">armbian-update -k 6.1.115</span><br></pre></td></tr></table></figure><h2 id="第二次连ssh"><a href="#第二次连ssh" class="headerlink" title="第二次连ssh"></a>第二次连ssh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 这句可以不要，相当于运行该命令时，会安装一些必要软件。</span></span><br><span class="line"><span class="comment"># 打印同列表后，按 ctrl+c 退出</span></span><br><span class="line">armbian-software</span><br><span class="line"></span><br><span class="line">armbian-upgrade</span><br><span class="line"></span><br><span class="line">curl -L https://mirrors.lierfang.com/pxcloud/lierfang.gpg -o /etc/apt/trusted.gpg.d/lierfang.gpg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备做安装装的准备，设置网络网卡</span></span><br><span class="line"><span class="comment"># 改变一下下面两个变量的值，</span></span><br><span class="line"><span class="comment"># 即目前ip设为 192.168.1.2，网卡使用 eth0</span></span><br><span class="line">tmp_ip=192.168.1.2</span><br><span class="line">tmp_if_name=eth0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始设置网络网卡 </span></span><br><span class="line"><span class="built_in">source</span> /etc/os-release</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb  https://mirrors.lierfang.com/pxcloud/pxvirt <span class="variable">$VERSION_CODENAME</span> main"</span>&gt;/etc/apt/sources.list.d/pxvirt-sources.list</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"pxvirt"</span> &gt; /etc/hostname</span><br><span class="line">cat &lt;&lt;eof &gt; /etc/hosts</span><br><span class="line">127.0.0.1   localhost</span><br><span class="line"><span class="variable">$&#123;tmp_ip&#125;</span> pxvirt.local pxvirt </span><br><span class="line"></span><br><span class="line">::1         localhost ip6-localhost ip6-loopback</span><br><span class="line">fe00::0     ip6-localnet</span><br><span class="line">ff00::0     ip6-mcastprefix</span><br><span class="line">ff02::1     ip6-allnodes</span><br><span class="line">ff02::2     ip6-allrouters</span><br><span class="line">eof</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">disable</span> NetworkManager</span><br><span class="line">systemctl stop NetworkManager</span><br><span class="line"></span><br><span class="line">apt install vim ifupdown2 -y</span><br><span class="line">rm /etc/network/interfaces.new</span><br><span class="line"></span><br><span class="line">tmp_gateway=`<span class="built_in">echo</span> <span class="variable">$tmp_ip</span> | awk -F. <span class="string">'&#123;print $1"."$2"."$3".1"&#125;'</span>`</span><br><span class="line">cat &lt;&lt;eof &gt;&gt; /etc/network/interfaces</span><br><span class="line">auto <span class="variable">$&#123;tmp_if_name&#125;</span></span><br><span class="line">iface <span class="variable">$&#123;tmp_if_name&#125;</span> inet static</span><br><span class="line">      address <span class="variable">$&#123;tmp_ip&#125;</span>/24</span><br><span class="line">      gateway <span class="variable">$&#123;tmp_gateway&#125;</span></span><br><span class="line">eof</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"show hosts '/etc/hosts' ................."</span></span><br><span class="line">cat /etc/hosts</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"show interfaces '/etc/network/interfaces' ............."</span></span><br><span class="line">cat /etc/network/interfaces</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"检查，如果有问题，重启后，可能ssh连接不到系统"</span></span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="第三次连ssh"><a href="#第三次连ssh" class="headerlink" title="第三次连ssh"></a>第三次连ssh</h2><p>注意，由于由dhcp改成了静态ip，可能要设置dns,否则可能同有网</p><p>可以用以下命令试试</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ping 8.8.8.8</span><br><span class="line"></span><br><span class="line">curl baidu.com</span><br></pre></td></tr></table></figure><p>如果能ping 但不能curl 就是dns问题，使用以下命令设置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"nameserver 8.8.8.8"</span> &gt; /etc/resolv.conf</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install proxmox-ve pve-manager qemu-server pve-cluster</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;arm的pve还是太小众 。搞了个e20c来玩pve，安装好了遇到了问题，在gemini的帮助下解决了&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="other" scheme="https://blog.lopygo.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>common-security-scanning-tools-for-linux</title>
+    <link href="https://blog.lopygo.com/2025/2025-04-02-common-security-scanning-tools-for-linux/"/>
+    <id>https://blog.lopygo.com/2025/2025-04-02-common-security-scanning-tools-for-linux/</id>
+    <published>2025-04-02T08:28:04.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>常用的安全漏洞扫描工具</p><a id="more"></a>  <p>以下由gemini生成的，先保存再说</p><p><strong>推荐工具组合:</strong></p><ol><li><p><strong>Trivy (用于软件包和操作系统漏洞扫描 - 必须)</strong></p><ul><li><strong>为什么?</strong> 非常适合你的场景。它快速、易用，专门扫描已安装的操作系统软件包 (Debian packages) 和某些应用依赖项中的已知 CVEs，并直接提供 CVSS v3 分数。因为它扫描的是系统当前状态，所以非常适合在最终交付前运行。</li><li><p><strong>怎么用?</strong></p><ul><li>在服务器还能连接互联网时安装 Trivy (使用前面提到的方法之一，如 <code>apt</code> 或下载 <code>.deb</code>)。</li><li>更新 Trivy 的漏洞数据库 (通常在扫描时自动进行，或手动 <code>trivy image --download-db-only</code>)。</li><li><p>在服务器本地运行扫描:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 扫描操作系统安装的软件包</span></span><br><span class="line">trivy os --severity HIGH,CRITICAL --ignore-unfixed --format table -o os-vulnerabilities.txt</span><br><span class="line"><span class="comment"># 或扫描整个根文件系统 (会包含 OS 包，可能更全面)</span></span><br><span class="line">trivy fs --security-checks vuln --severity HIGH,CRITICAL --ignore-unfixed / -o fs-vulnerabilities.txt</span><br></pre></td></tr></table></figure><ul><li><code>--severity HIGH,CRITICAL</code>: 仅报告高危和严重漏洞，方便聚焦。你可以根据需要调整。</li><li><code>--ignore-unfixed</code>: 通常建议加上，忽略那些发行版尚未提供修复补丁的漏洞（因为你可能也无法修复）。</li><li><code>-o ...</code>: 将结果输出到文件方便查看。</li></ul></li></ul></li><li><strong>优点:</strong> 快速定位需要打补丁的软件包。</li></ul></li><li><p><strong>GVM (OpenVAS) (用于网络服务漏洞扫描 - 强烈推荐)</strong></p><ul><li><strong>为什么?</strong> Trivy 主要看软件包版本，而 GVM 则模拟攻击者从网络层面探测服务。它可以发现：<ul><li>运行的服务本身存在的已知漏洞 (即使软件包是最新版，服务配置也可能有问题或该版本有0-day)。</li><li>配置错误导致的安全风险（如弱密码、信息泄露等）。</li><li>这是 Trivy 无法覆盖的领域，对评估网络暴露面至关重要。</li></ul></li><li><strong>怎么用?</strong><ul><li><strong>最佳实践:</strong> 在另一台机器（可以是你的管理机，只要能访问目标服务器 IP）上安装 GVM (推荐使用 Docker 镜像，部署更快)。</li><li>在 GVM 机器还能访问互联网时，确保其漏洞库 (NVT Feed) 是最新的。登录 GVM 的 Web UI (叫做 Greenbone Security Assistant / GSA)，通常在 “Administration” -&gt; “Feed Status” 下查看并更新。</li><li>在 GSA 中配置扫描任务，目标为你待交付的 Debian 服务器的 IP 地址。</li><li>选择一个合适的扫描配置 (例如 “Full and fast” 或根据需要调整)。</li><li>运行扫描。扫描会花费一些时间。</li><li>查看报告，重点关注高危和严重漏洞，报告会包含 CVSS v3 分数。</li></ul></li><li><strong>如果 GVM 太复杂?</strong><ul><li><strong>替代方案:</strong> 使用 <strong>Nmap + Vuln Scripts</strong>。虽然不如 GVM 全面，但可以做基本的网络服务漏洞探测。<br><code>`</code>bash<h1 id="确保-Nmap-和-nmap-sc"><a href="#确保-Nmap-和-nmap-sc" class="headerlink" title="确保 Nmap 和 nmap-sc"></a>确保 Nmap 和 nmap-sc</h1></li></ul></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;常用的安全漏洞扫描工具&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="develop" scheme="https://blog.lopygo.com/categories/develop/"/>
+    
+    
+      <category term="develop" scheme="https://blog.lopygo.com/tags/develop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>install-wireguard-in-openwrt</title>
+    <link href="https://blog.lopygo.com/2024/2024-08-29-install-wireguard-in-openwrt/"/>
+    <id>https://blog.lopygo.com/2024/2024-08-29-install-wireguard-in-openwrt/</id>
+    <published>2024-08-28T22:09:56.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>在openwrt中安装wireguard server<br><a id="more"></a>  </p><p>安装</p><p><a href="https://6xyun.cn/article/openwrt-install-wireguard" target="_blank" rel="noopener">https://6xyun.cn/article/openwrt-install-wireguard</a></p><p>按上面的安好了后，不能访问到局域网中的设备</p><p>按下面的配置</p><p><a href="https://www.chiphell.com/thread-2649373-1-1.html" target="_blank" rel="noopener">https://www.chiphell.com/thread-2649373-1-1.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在openwrt中安装wireguard server&lt;br&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="other" scheme="https://blog.lopygo.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unable to fully install initramfs-tools on debian 12 with additional harddisk errors</title>
+    <link href="https://blog.lopygo.com/2024/2024-07-31-a-error-for-initramfs-tool/"/>
+    <id>https://blog.lopygo.com/2024/2024-07-31-a-error-for-initramfs-tool/</id>
+    <published>2024-07-30T23:55:20.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>Unable to fully install <code>initramfs-tools</code> on debian 12 with additional harddisk errors<br><a id="more"></a>  </p><h2 id="大致问题"><a href="#大致问题" class="headerlink" title="大致问题"></a>大致问题</h2><blockquote><p><a href="https://www.techpository.com/linux-error-with-update-initramfs-no-space-left-on-device/" target="_blank" rel="noopener">https://www.techpository.com/linux-error-with-update-initramfs-no-space-left-on-device/</a></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update-initramfs: Generating /boot/initrd.img-6.1.0-23-amd64</span><br><span class="line">zstd: error 70 : Write error : cannot write block : No space left on device</span><br><span class="line">E: mkinitramfs failure zstd -q -9 -T0 70</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-6.1.0-23-amd64 with 1.</span><br><span class="line">dpkg: 处理软件包 initramfs-tools (--configure)时出错：</span><br><span class="line"> 已安装 initramfs-tools 软件包 post-installation 脚本 子进程返回错误状态 1</span><br><span class="line">正在处理用于 libvlc-bin:amd64 (3.0.21-0+deb12u1) 的触发器 ...</span><br><span class="line">在处理时有错误发生：</span><br><span class="line"> initramfs-tools</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>首先，创建一个文件<code>/etc/initramfs-tools/conf.d/modules</code>，内容为<code>MODULES=dep</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"MODULES=dep"</span> &gt; /etc/initramfs-tools/conf.d/modules</span><br></pre></td></tr></table></figure><p>然后执行 <code>update-initramfs -u</code> 或 <code>update-initramfs -k all -u</code></p><p>搞定</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Unable to fully install &lt;code&gt;initramfs-tools&lt;/code&gt; on debian 12 with additional harddisk errors&lt;br&gt;
+    
+    </summary>
+    
+      <category term="debian" scheme="https://blog.lopygo.com/categories/debian/"/>
+    
+    
+      <category term="debian" scheme="https://blog.lopygo.com/tags/debian/"/>
+    
+      <category term="linux" scheme="https://blog.lopygo.com/tags/linux/"/>
+    
+      <category term="initramfs" scheme="https://blog.lopygo.com/tags/initramfs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pve运行arm虚拟机</title>
+    <link href="https://blog.lopygo.com/2024/2024-06-28-new-vm-on-arm-pve/"/>
+    <id>https://blog.lopygo.com/2024/2024-06-28-new-vm-on-arm-pve/</id>
+    <published>2024-06-27T16:54:58.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>pve运行arm虚拟机<br><a id="more"></a>  </p><p><a href="https://zhuanlan.zhihu.com/p/620969622" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/620969622</a></p><p><a href="https://superuser.com/questions/980202/cant-call-grubx64-efi-using-startup-nsh-in-efi" target="_blank" rel="noopener">https://superuser.com/questions/980202/cant-call-grubx64-efi-using-startup-nsh-in-efi</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;pve运行arm虚拟机&lt;br&gt;
+    
+    </summary>
+    
+      <category term="pve" scheme="https://blog.lopygo.com/categories/pve/"/>
+    
+    
+      <category term="pve" scheme="https://blog.lopygo.com/tags/pve/"/>
+    
+      <category term="vm" scheme="https://blog.lopygo.com/tags/vm/"/>
+    
+      <category term="arm" scheme="https://blog.lopygo.com/tags/arm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Copilot的免费替代品</title>
+    <link href="https://blog.lopygo.com/2024/2024-06-12-free-alternatives-to-github-copilot/"/>
+    <id>https://blog.lopygo.com/2024/2024-06-12-free-alternatives-to-github-copilot/</id>
+    <published>2024-06-12T15:49:00.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>列一下Github Copilot的免费替代品<br><a id="more"></a>  </p><p>转自</p><blockquote><p><a href="https://www.cnblogs.com/feffery/p/17428388.html" target="_blank" rel="noopener">https://www.cnblogs.com/feffery/p/17428388.html</a></p></blockquote><h1 id="Amazon-CodeWhisperer"><a href="#Amazon-CodeWhisperer" class="headerlink" title="Amazon CodeWhisperer"></a>Amazon CodeWhisperer</h1><p>Amazon CodeWhisperer是由亚马逊研发的一款免费的AI代码生成工具，面向个人用户提供无限制的代码智能生成服务</p><h1 id="Codeium"><a href="#Codeium" class="headerlink" title="Codeium"></a>Codeium</h1><p>Codeium是由初创公司研发的一款对标Github Copilot的代码智能生成插件，支持主流的各种编程语言，同样面向个人用户免费使用</p><h1 id="CodeGeeX"><a href="#CodeGeeX" class="headerlink" title="CodeGeeX"></a>CodeGeeX</h1><p>CodeGeeX跟前面两款插件相比要冷门一些，不过特别地是其是开源的，项目地址：<a href>https://github.com/THUDM/CodeGeeX</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;列一下Github Copilot的免费替代品&lt;br&gt;
+    
+    </summary>
+    
+      <category term="develop" scheme="https://blog.lopygo.com/categories/develop/"/>
+    
+    
+      <category term="develop" scheme="https://blog.lopygo.com/tags/develop/"/>
+    
+      <category term="vscode" scheme="https://blog.lopygo.com/tags/vscode/"/>
+    
+      <category term="copilot" scheme="https://blog.lopygo.com/tags/copilot/"/>
+    
+      <category term="codeium" scheme="https://blog.lopygo.com/tags/codeium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装lxc版openwrt</title>
+    <link href="https://blog.lopygo.com/2024/2024-02-23-install-lxc-openwrt-on-pve/"/>
+    <id>https://blog.lopygo.com/2024/2024-02-23-install-lxc-openwrt-on-pve/</id>
+    <published>2024-02-22T20:09:11.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>安装lxc版openwrt</p><a id="more"></a>  <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>我是pve7.4</p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>截止目前，在这里<a href="https://fw.koolcenter.com/LEDE_X64_fw867/LXC%20CT%E6%A8%A1%E6%9D%BF/" target="_blank" rel="noopener">下载</a></p><p>我下载的是 <code>openwrt-koolshare-router-v3.2-r19470-2f7d60f0e5-x86-64-generic-rootfs.tar.gz</code></p><h2 id="上传到pve中"><a href="#上传到pve中" class="headerlink" title="上传到pve中"></a>上传到pve中</h2><p>这步不多解释吧</p><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>在pve的控制台中，输入类似命令，有些地方要改</p><p>模板位置: local:vztmpl/openwrt-koolshare-router-v3.2-r19470-2f7d60f0e5-x86-64-generic-rootfs.tar.gz</p><p><code>--rootfs local-lvm:2</code> 安装系统的位置，后面那个数字是磁盘大小，单位为GB</p><p><code>--hostname openwrt-side</code> 主机名称</p><p><code>--cores 2</code> 核心数，一般1核就够了</p><p><code>--memory 1024</code> 内存，一般512就够了</p><p><code>-net0 bridge=vmbr0,name=eth0</code> 网卡</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># LXC_ID set your new CTID</span></span><br><span class="line">LXC_ID=902</span><br><span class="line"></span><br><span class="line">pct create <span class="variable">$&#123;LXC_ID&#125;</span> \</span><br><span class="line">    <span class="built_in">local</span>:vztmpl/openwrt-koolshare-router-v3.2-r19470-2f7d60f0e5-x86-64-generic-rootfs.tar.gz \</span><br><span class="line">    --rootfs <span class="built_in">local</span>-lvm:2 \</span><br><span class="line">    --ostype unmanaged \</span><br><span class="line">    --hostname openwrt-side \</span><br><span class="line">    --arch amd64 \</span><br><span class="line">    --cores 2 \</span><br><span class="line">    --memory 1024 \</span><br><span class="line">    --swap 0 \</span><br><span class="line">    -net0 bridge=vmbr0,name=eth0</span><br><span class="line"></span><br><span class="line"><span class="comment"># if add tun</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"lxc.cgroup2.devices.allow: c 10:200 rwm"</span> &gt;&gt; /etc/pve/lxc/<span class="variable">$&#123;LXC_ID&#125;</span>.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file"</span> &gt;&gt; /etc/pve/lxc/<span class="variable">$&#123;LXC_ID&#125;</span>.conf</span><br></pre></td></tr></table></figure><p>如果还需要拨号或者直通网卡等功能，还得添加其它配置，由于我只是做旁路由，就没去搞了，有需要的百度</p><h2 id="选择一些功能"><a href="#选择一些功能" class="headerlink" title="选择一些功能"></a>选择一些功能</h2><p>节点-》选择你新增的虚拟机 =&gt; 选项 =》 功能 。。。</p><p>比如我几乎全选了 [fuse=1,mount=nfs;cifs,nesting=1]</p><h2 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h2><p>这步可略过，只是查看配置文件</p><p><code>cat /etc/pve/lxc/${LXC_ID}.conf</code></p><p>结果大致为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">arch: amd64</span><br><span class="line">cores: 2</span><br><span class="line">features: fuse=1,mount=nfs;cifs,nesting=1</span><br><span class="line">hostname: openwrt-side</span><br><span class="line">memory: 1024</span><br><span class="line">net0: name=eth0,bridge=vmbr0,hwaddr=CE:A1:05:57:F6:4A,type=veth</span><br><span class="line">ostype: unmanaged</span><br><span class="line">rootfs: local-lvm:vm-901-disk-0,size=2G</span><br><span class="line">swap: 0</span><br><span class="line">lxc.cgroup2.devices.allow: c 10:200 rwm</span><br><span class="line">lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file</span><br></pre></td></tr></table></figure></p><h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><p>启动后，第一步改网络，在pve中，点 ${LXC_ID} 的控制台</p><p><code>vim /etc/config/network</code></p><p>修改lan下面的ip</p><p>改完后，重启网络<code>service network restart</code>或重启虚拟机<code>reboot</code></p><p>然后就可以在浏览器中操作了</p><p>默认密码是<code>koolshare</code></p><h1 id="一些检测脚本"><a href="#一些检测脚本" class="headerlink" title="一些检测脚本"></a>一些检测脚本</h1><p>tiktok<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s https://raw.githubusercontent.com/lmc999/TikTokCheck/main/tiktok.sh)</span><br></pre></td></tr></table></figure></p><p>netflix disney chatgpt 等<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安装lxc版openwrt&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="router" scheme="https://blog.lopygo.com/categories/router/"/>
+    
+    
+      <category term="openwrt" scheme="https://blog.lopygo.com/tags/openwrt/"/>
+    
+      <category term="router" scheme="https://blog.lopygo.com/tags/router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>clash</title>
+    <link href="https://blog.lopygo.com/2023/fixed-09-05-clash/"/>
+    <id>https://blog.lopygo.com/2023/fixed-09-05-clash/</id>
+    <published>2023-09-04T17:42:55.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>what</p><a id="more"></a>  <p>content of this post</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;what&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="other" scheme="https://blog.lopygo.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>a site</title>
+    <link href="https://blog.lopygo.com/2023/2023-04-13-a-site/"/>
+    <id>https://blog.lopygo.com/2023/2023-04-13-a-site/</id>
+    <published>2023-04-12T17:54:59.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>神奇的字幕网站</p><a id="more"></a>  <table><thead><tr><th>名称</th><th>说明</th><th>文件类型</th><th>地址</th><th>备注</th></tr></thead><tbody><tr><td>Subtitle Cat</td><td>字幕</td><td>文件</td><td><a href="https://subtitlecat.com" target="_blank" rel="noopener">https://subtitlecat.com</a></td><td>基本上该有的都有了</td></tr><tr><td>AV Subs</td><td>字幕</td><td>文件</td><td><a href="https://www.avsubtitles.com" target="_blank" rel="noopener">https://www.avsubtitles.com</a></td><td>AV字幕捡漏</td></tr><tr><td>ScanLover</td><td>字幕</td><td>文件</td><td><a href="https://scanlover.com" target="_blank" rel="noopener">https://scanlover.com</a></td><td>AV字幕捡漏</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;神奇的字幕网站&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="other" scheme="https://blog.lopygo.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx上的一个反向代理https的错误</title>
+    <link href="https://blog.lopygo.com/2023/2023-04-07-An-error-with-HTTPS-reverse-proxy-on-nginx/"/>
+    <id>https://blog.lopygo.com/2023/2023-04-07-An-error-with-HTTPS-reverse-proxy-on-nginx/</id>
+    <published>2023-04-07T11:05:22.000Z</published>
+    <updated>2025-09-16T17:33:20.688Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>在nginx上突然出现的一个反向代理https的错误，特此记录<br><a id="more"></a>  </p><h1 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h1><p>本来就是一个简单的反向代理，用来代理openai的api，今天之前用得好好的，重启了nginx后，就不能用了</p><blockquote><p>真实域名已隐藏</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        server_name openai.your.domain;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass https://api.openai.com/;</span><br><span class="line">            proxy_set_header Host api.openai.com;</span><br><span class="line">            proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line"></span><br><span class="line">            proxy_set_header Connection &apos;&apos;;</span><br><span class="line">            proxy_http_version 1.1;</span><br><span class="line">            chunked_transfer_encoding off;</span><br><span class="line">            proxy_buffering off;</span><br><span class="line">            proxy_cache off;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    listen 443 ssl; # managed by Certbot</span><br><span class="line">    ssl_certificate /etc/letsencrypt/live/openai.your.domain/fullchain.pem; # managed by Certbot</span><br><span class="line">    ssl_certificate_key /etc/letsencrypt/live/openai.your.domain/privkey.pem; # managed by Certbot</span><br><span class="line">    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot</span><br><span class="line">    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>http请求报502</p><p>nginx日志报错，大致是这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2023/04/07 10:53:24 [error] 886#886: *21 SSL_do_handshake() failed (SSL: error:0A000410:SSL routines::sslv3 alert handshake failure:SSL alert number 40) while SSL handshaking to upstream, client: 151.61.223.142, server: openai.your.domain, request: &quot;GET /v1/chat/completions HTTP/1.1&quot;, upstream: &quot;https://104.18.7.192:443/v1/chat/completions&quot;, host: &quot;openai.your.domain&quot;</span><br></pre></td></tr></table></figure><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>在location里加一句<code>proxy_ssl_server_name on;</code>，再重启nginx就可以了，如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    proxy_ssl_server_name on;</span><br><span class="line">    proxy_pass https://api.openai.com/;</span><br><span class="line">    proxy_set_header Host api.openai.com;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line"></span><br><span class="line">    proxy_set_header Connection &apos;&apos;;</span><br><span class="line">    proxy_http_version 1.1;</span><br><span class="line">    chunked_transfer_encoding off;</span><br><span class="line">    proxy_buffering off;</span><br><span class="line">    proxy_cache off;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么，从日志看，<code>proxy_set_header Host api.openai.com;</code>这一句是不是没有生效呢。再研究吧</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><blockquote><p><a href="https://www.claudiokuenzler.com/blog/1120/nginx-reverse-proxy-ssl-alert-number-40-while-ssl-handshaking-upstream" target="_blank" rel="noopener">https://www.claudiokuenzler.com/blog/1120/nginx-reverse-proxy-ssl-alert-number-40-while-ssl-handshaking-upstream</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在nginx上突然出现的一个反向代理https的错误，特此记录&lt;br&gt;
+    
+    </summary>
+    
+      <category term="develop" scheme="https://blog.lopygo.com/categories/develop/"/>
+    
+    
+      <category term="develop" scheme="https://blog.lopygo.com/tags/develop/"/>
+    
+      <category term="nginx" scheme="https://blog.lopygo.com/tags/nginx/"/>
+    
+      <category term="reverse" scheme="https://blog.lopygo.com/tags/reverse/"/>
+    
+      <category term="proxy" scheme="https://blog.lopygo.com/tags/proxy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>尝试使用Depay来支付chatgpt</title>
+    <link href="https://blog.lopygo.com/2023/2023-03-25-Attempt-to-use-Depay/"/>
+    <id>https://blog.lopygo.com/2023/2023-03-25-Attempt-to-use-Depay/</id>
+    <published>2023-03-25T15:52:29.000Z</published>
+    <updated>2025-09-16T17:33:20.687Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>chatgpt plus或者api需要付费了，尝试一下depay</p><a id="more"></a>  <h1 id="为何使用"><a href="#为何使用" class="headerlink" title="为何使用"></a>为何使用</h1><p>首先申明，任何机构都可能破产或者跑路，包括美国才破产的一些银行</p><p>所以请明确考虑自己的用途和能承担的风险</p><p>比如本人，之前只有国内发的visa卡，但目前chatgpt不支持支付，故申请一个depay试试</p><p>然后，我又有一些usdt，也算多了一个出金方式</p><p>由于开销少，需要支付时，再充个几刀，用完就行了</p><p><code>注意，最少充值5usdt，否则不到账</code></p><p><code>注意，最少充值5usdt，否则不到账</code></p><p><code>注意，最少充值5usdt，否则不到账</code></p><h1 id="卡片等级"><a href="#卡片等级" class="headerlink" title="卡片等级"></a>卡片等级</h1><table><thead><tr><th>-</th><th>Lite</th><th>标准</th><th>高级</th><th>白金</th><th>黑金</th></tr></thead><tbody><tr><td>开卡费（usdt）</td><td>10</td><td>0</td><td>10</td><td>50</td><td>活动空投</td></tr><tr><td>月费（usdt）</td><td>2</td><td>1</td><td>0.5</td><td>0</td><td>0</td></tr><tr><td>额度(usd)</td><td>20000</td><td>20000</td><td>50000</td><td>200000</td><td>无限</td></tr><tr><td>充值费率(%)</td><td>2</td><td>1.35</td><td>1.2</td><td>1</td><td>0.8</td></tr></tbody></table><p>其中：</p><p>lite卡不用Kyc。对隐私有需求的可选择</p><p>黑金不能直接开，只能活动空投。目前活动为拉新20个才有资格参加空投</p><p>标准卡，手续费最少收1刀</p><p>卡的有效期是3年</p><h1 id="申请"><a href="#申请" class="headerlink" title="申请"></a>申请</h1><p>可以直接登网页申请</p><p><a href="https://depay.depay.one/web-app/register-h5?invitCode=268811&lang=zh-cn" target="_blank" rel="noopener">注册地址</a></p><p>或者app注册</p><p><a href="https://depay.one/zh-cn/download.html?invitCode=268811" target="_blank" rel="noopener">下载地址</a></p><p>苹果需要海外账号，直接搜索<code>depay</code>.</p><p>app注册，可选填邀请码助功，谢谢： <code>268811</code></p><h1 id="Kyc"><a href="#Kyc" class="headerlink" title="Kyc"></a>Kyc</h1><p>注册完成后，可以隐私非敏感用户可以选择kyc先，即类似于实名认证。</p><p>就上传个身份证照片和录一段<code>念随机数字的视频</code>，个人认为尺度不大</p><p>隐私敏感用户可以跳过此步骤，开lite卡，只是贵点</p><h1 id="开卡"><a href="#开卡" class="headerlink" title="开卡"></a>开卡</h1><p>切换到首页，开卡</p><p>考虑到我本人：</p><ol><li>非大户，隐私又不值钱</li><li>花费应该又不多，目前就chatgpt，可能美区appstroe以后也会用</li><li>标准卡手续费的最低消费1刀</li></ol><p>目前我选择开高级卡，10刀开费，每月0.5</p><h2 id="开卡建议"><a href="#开卡建议" class="headerlink" title="开卡建议"></a>开卡建议</h2><p>有效期间内</p><p>总费用 = 开卡费 + 月费 <em> 36 + 总充值 </em> 充值费率</p><h3 id="1-假设就用一两次，后面甚至都不考虑交月租"><a href="#1-假设就用一两次，后面甚至都不考虑交月租" class="headerlink" title="1. 假设就用一两次，后面甚至都不考虑交月租"></a>1. 假设就用一两次，后面甚至都不考虑交月租</h3><p>标准或lite卡</p><h3 id="2-假设，想长期使用，且本卡能稳定使用三年"><a href="#2-假设，想长期使用，且本卡能稳定使用三年" class="headerlink" title="2. 假设，想长期使用，且本卡能稳定使用三年"></a>2. 假设，想长期使用，且本卡能稳定使用三年</h3><table><thead><tr><th>ss</th><th>ss</th></tr></thead><tbody><tr><td>标准卡</td><td>0  + 36 + 1.35 / 100 x 总费用</td></tr><tr><td>高级卡</td><td>10 + 18 + 1.2 / 100 x 总费用</td></tr><tr><td>白金卡</td><td>50 + 0  + 1 / 100 x 总费用</td></tr></tbody></table><p>标准卡无论固定费和费率都高于高级卡</p><p>高级卡和白金卡的分水岭在 11000usdt</p><p>即期间内 充值&lt; 11000usdt的，选高级卡， 充值&gt; 11000usdt的，选白金卡</p><h3 id="3-假设，本卡中途跑路"><a href="#3-假设，本卡中途跑路" class="headerlink" title="3. 假设，本卡中途跑路"></a>3. 假设，本卡中途跑路</h3><p>损失余额和开卡费</p><p>余额：</p><p>考虑到充值费率的最低消费，标准卡的余额不会小于高级卡</p><p>开卡费：</p><p>高级的10刀与白金的50刀</p><h1 id="充值兑换"><a href="#充值兑换" class="headerlink" title="充值兑换"></a>充值兑换</h1><p>大致为app里在支持的每条链上为每个用户分配了一个钱包，通过该链转到地址就存入钱包了。</p><p>然后再在app里兑换成usd</p><p>就可以交易了</p><p>大致流程为</p><p>（其它钱包地址的虚拟币）-&gt; depay钱包的usdt -&gt; usd -&gt; mastercard -&gt;(消费，绑支付宝京东微信等)</p><h1 id="各类app绑卡使用"><a href="#各类app绑卡使用" class="headerlink" title="各类app绑卡使用"></a>各类app绑卡使用</h1><p>暂无</p><h1 id="风险总结"><a href="#风险总结" class="headerlink" title="风险总结"></a>风险总结</h1><ol><li>跑路把钱带走<br>每次充值不多，可以承受。开卡费同理</li><li>隐私泄露<br>鄙人，没啥隐私，哈哈哈哈</li></ol><h1 id="chatgpt交费"><a href="#chatgpt交费" class="headerlink" title="chatgpt交费"></a>chatgpt交费</h1><p>暂无</p><h1 id="ojbk"><a href="#ojbk" class="headerlink" title="ojbk"></a>ojbk</h1><p><a href="https://depay.depay.one/web-app/register-h5?invitCode=268811&lang=zh-cn" target="_blank" rel="noopener">注册地址</a></p><p><a href="https://depay.one/zh-cn/download.html?invitCode=268811" target="_blank" rel="noopener">下载地址</a></p><p>app注册，可选填邀请码助功，谢谢： <code>268811</code></p><!-- 安装并申请Depay账号并实名验证；充值加密货币USDT（可向朋友换购或者到中心化交易所购买）到Depay APP钱包；Depay APP中开通万事达虚拟卡（VISA卡暂时无法申请）；将USDT换成USD美元，再充值到Depay万事达银行卡里，就相当于预付费的万事达信用卡了。 -->]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chatgpt plus或者api需要付费了，尝试一下depay&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="depay" scheme="https://blog.lopygo.com/categories/depay/"/>
+    
+      <category term="chatgpt" scheme="https://blog.lopygo.com/categories/depay/chatgpt/"/>
+    
+    
+      <category term="depay" scheme="https://blog.lopygo.com/tags/depay/"/>
+    
+      <category term="chatgpt" scheme="https://blog.lopygo.com/tags/chatgpt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>use-warp-on-vps</title>
+    <link href="https://blog.lopygo.com/2023/2023-02-28-use-warp-on-vps/"/>
+    <id>https://blog.lopygo.com/2023/2023-02-28-use-warp-on-vps/</id>
+    <published>2023-02-28T14:08:58.000Z</published>
+    <updated>2025-09-16T17:33:20.687Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>在vps上装warp</p><a id="more"></a>  <h1 id="转自"><a href="#转自" class="headerlink" title="转自"></a>转自</h1><blockquote><p><a href="https://p3terx.com/archives/cloudflare-warp-configuration-script.html" target="_blank" rel="noopener">https://p3terx.com/archives/cloudflare-warp-configuration-script.html</a></p></blockquote><h1 id="为什么要这么搞呢"><a href="#为什么要这么搞呢" class="headerlink" title="为什么要这么搞呢"></a>为什么要这么搞呢</h1><p>不知道</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>下面的 <code>git.io/warp.sh</code> 可以替换成<a href="https://raw.githubusercontent.com/P3TERX/warp.sh/main/warp.sh" target="_blank" rel="noopener">这个链接</a>或者<a href="/2023/2023-02-28-use-warp-on-vps/warp.sh" title="这个链接">这个链接</a></p><h2 id="添加-WARP-Wire­Guard-双栈全局网络，直接使用以下-WARP-脚本命令一把梭："><a href="#添加-WARP-Wire­Guard-双栈全局网络，直接使用以下-WARP-脚本命令一把梭：" class="headerlink" title="添加 WARP Wire­Guard 双栈全局网络，直接使用以下 WARP 脚本命令一把梭："></a>添加 WARP Wire­Guard 双栈全局网络，直接使用以下 WARP 脚本命令一把梭：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -fsSL git.io/warp.sh) d</span><br></pre></td></tr></table></figure><h2 id="添加或更改-IPv4-​IPv6-网络中的一个出口走-WARP-Wire­Guard-网络，使用以下-WARP-脚本命令一把梭："><a href="#添加或更改-IPv4-​IPv6-网络中的一个出口走-WARP-Wire­Guard-网络，使用以下-WARP-脚本命令一把梭：" class="headerlink" title="添加或更改 IPv4/​IPv6 网络中的一个出口走 WARP Wire­Guard 网络，使用以下 WARP 脚本命令一把梭："></a>添加或更改 IPv4/​IPv6 网络中的一个出口走 WARP Wire­Guard 网络，使用以下 WARP 脚本命令一把梭：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自动配置 WARP WireGuard IPv4 网络（IPv4 出站流量走 WARP 网络）</span></span><br><span class="line">bash &lt;(curl -fsSL git.io/warp.sh) 4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动配置 WARP WireGuard IPv6 网络（IPv6 出站流量走 WARP 网络）</span></span><br><span class="line">bash &lt;(curl -fsSL git.io/warp.sh) 6</span><br></pre></td></tr></table></figure><h2 id="其它相关命令："><a href="#其它相关命令：" class="headerlink" title="其它相关命令："></a>其它相关命令：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 WARP 脚本子命令列表</span></span><br><span class="line">bash &lt;(curl -fsSL git.io/warp.sh) <span class="built_in">help</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启 WARP WireGuard 网络接口</span></span><br><span class="line">systemctl restart wg-quick@wgcf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁用 WARP WireGuard 网络接口</span></span><br><span class="line">systemctl <span class="built_in">disable</span> wg-quick@wgcf --now</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在vps上装warp&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.lopygo.com/categories/other/"/>
+    
+    
+      <category term="router" scheme="https://blog.lopygo.com/tags/router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>install-openclash-on-openwrt</title>
+    <link href="https://blog.lopygo.com/2023/2023-02-23-install-openclash-on-openwrt/"/>
+    <id>https://blog.lopygo.com/2023/2023-02-23-install-openclash-on-openwrt/</id>
+    <published>2023-02-22T20:41:40.000Z</published>
+    <updated>2025-09-16T17:33:20.687Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>abstract of this post<br><a id="more"></a><br>content of this post</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">opkg update</span><br><span class="line"></span><br><span class="line">CLASH_VERSION=0.45.157-beta</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"></span><br><span class="line">wget https://github.com/vernesong/OpenClash/releases/download/v<span class="variable">$&#123;CLASH_VERSION&#125;</span>/luci-app-openclash_<span class="variable">$&#123;CLASH_VERSION&#125;</span>_all.ipk -O openclash.ipk</span><br><span class="line"></span><br><span class="line">opkg install openclash.ipk</span><br><span class="line"></span><br><span class="line">rm openclash.ipk</span><br></pre></td></tr></table></figure><a href="/2023/2023-02-23-install-openclash-on-openwrt/clash_install_on_openwrt.sh" title="Install.sh">Install.sh</a><h1 id="下载-更新内核"><a href="#下载-更新内核" class="headerlink" title="下载/更新内核"></a>下载/更新内核</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://github.com/vernesong/OpenClash/tree/core/master" target="_blank" rel="noopener">https://github.com/vernesong/OpenClash/tree/core/master</a></p><p>分别去该目录下的 <code>dev</code>,<code>meta</code>,<code>premium</code>下下载自己相应系统的内核</p><h2 id="上传到路由中"><a href="#上传到路由中" class="headerlink" title="上传到路由中"></a>上传到路由中</h2><p>将下载的三个文件解压到 <code>/etc/openclash/core/</code>，分别命令为 <code>clash</code>,<code>clash_meta</code>,<code>clash_tun</code></p><p>这一步可以在路由的luci页面操作</p><p>服务 =》 openclash =&gt; 配置管理 =&gt; 上传文件类型， 分别选取相应的类型</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;abstract of this post&lt;br&gt;
+    
+    </summary>
+    
+      <category term="openwrt" scheme="https://blog.lopygo.com/categories/openwrt/"/>
+    
+    
+      <category term="openwrt" scheme="https://blog.lopygo.com/tags/openwrt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10上使用指定的ntp地址同步时间</title>
+    <link href="https://blog.lopygo.com/2023/2023-01-11-add-ntp-address-on-windows10/"/>
+    <id>https://blog.lopygo.com/2023/2023-01-11-add-ntp-address-on-windows10/</id>
+    <published>2023-01-11T11:39:21.000Z</published>
+    <updated>2025-09-16T17:33:20.686Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>内网有ntp的需求，搭一个ntp服务。给win10 增加一个ntp服务器地址<br><a id="more"></a>  </p><h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>我电脑为win10专业版，如发现有不一样，请去网上搜索你的版本对应的操作</p><h1 id="大致情况只用一句命令就可以了"><a href="#大致情况只用一句命令就可以了" class="headerlink" title="大致情况只用一句命令就可以了"></a>大致情况只用一句命令就可以了</h1><p>注意，需要管理员权限</p><p>将以下命令中的<code>SPACE_LIMITED_NTP_SERVERS</code>改成ntp服务器地址就可以了</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w32tm /config /update /manualpeerlist:SPACE_LIMITED_NTP_SERVERS /syncfromflags:manual /reliable:yes</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>微软官网的，不深究可以用不看</p><blockquote><p><a href="https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a></p></blockquote><p>Configure NTP on Windows Server</p><blockquote><p><a href="https://docs.vmware.com/en/VMware-Horizon-DaaS/services/horizondaas.install900/GUID-AEC90E5F-C5B6-447F-B03F-C1060C405E1F.html" target="_blank" rel="noopener">https://docs.vmware.com/en/VMware-Horizon-DaaS/services/horizondaas.install900/GUID-AEC90E5F-C5B6-447F-B03F-C1060C405E1F.html</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;内网有ntp的需求，搭一个ntp服务。给win10 增加一个ntp服务器地址&lt;br&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="https://blog.lopygo.com/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="https://blog.lopygo.com/tags/windows/"/>
+    
+      <category term="windows10" scheme="https://blog.lopygo.com/tags/windows10/"/>
+    
+      <category term="ntp" scheme="https://blog.lopygo.com/tags/ntp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10上搭ntp服务</title>
+    <link href="https://blog.lopygo.com/2023/2023-01-11-ntp-server-on-windows10/"/>
+    <id>https://blog.lopygo.com/2023/2023-01-11-ntp-server-on-windows10/</id>
+    <published>2023-01-11T09:46:49.000Z</published>
+    <updated>2025-09-16T17:33:20.686Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>内网有ntp的需求，搭一个ntp服务</p><a id="more"></a>  <h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>我电脑为win10专业版，如发现有不一样，请去网上搜索你的版本对应的操作</p><h1 id="修改注册表"><a href="#修改注册表" class="headerlink" title="修改注册表"></a>修改注册表</h1><h2 id="打开注册表编辑器"><a href="#打开注册表编辑器" class="headerlink" title="打开注册表编辑器"></a>打开注册表编辑器</h2><p>win10系统直接在系统的搜索框输入<code>regedit</code>就弹出来相关程序了</p><p>还可以在<code>运行</code>、<code>cmd</code>、<code>powershell</code>里面直接输入</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">regedit</span><br></pre></td></tr></table></figure><h2 id="修改位置1"><a href="#修改位置1" class="headerlink" title="修改位置1"></a>修改位置1</h2><p><code>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config</code>的<code>AnnounceFlags</code></p><p>有情提示，上面那一串路径，是可以复制下来，粘贴在注册表编辑器的地址栏的，注意地址栏上的<code>计算机</code>三个字别覆盖了</p><p>我电脑上 <code>AnnounceFlags</code>的值为<code>10</code></p><p>现修改 <code>AnnounceFlags</code>的值为<code>5</code></p><h2 id="修改位置2"><a href="#修改位置2" class="headerlink" title="修改位置2"></a>修改位置2</h2><p><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters</code>的<code>Type</code></p><p>我电脑上 <code>AnnounceFlags</code>的值为<code>NTP</code></p><p>现修改 <code>AnnounceFlags</code>的值为<code>NTP</code></p><p>这步看来不用改</p><h2 id="修改位置3"><a href="#修改位置3" class="headerlink" title="修改位置3"></a>修改位置3</h2><p><code>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer</code>的<code>Enabled</code></p><p>我电脑上 <code>Enabled</code>的值为<code>0</code></p><p>现修改 <code>Enabled</code>的值为<code>1</code></p><h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><p>以下两种方式，二选一</p><h2 id="使用powershell"><a href="#使用powershell" class="headerlink" title="使用powershell"></a>使用powershell</h2><p>以管理员身份打开<code>powershell</code>（左下角开始点鼠标右键，选<code>Windows Powershell(管理员)</code>）</p><p>依次输入以下命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">Start-Service</span> <span class="literal">-Name</span> W32Time</span><br><span class="line"></span><br><span class="line"><span class="built_in">Set-Service</span> <span class="literal">-Name</span> W32Time <span class="literal">-StartupType</span> Automatic</span><br><span class="line"></span><br><span class="line"><span class="built_in">Get-Service</span> W32Time | <span class="built_in">Select-Object</span> <span class="literal">-Property</span> Status, Name, DisplayName, StartType</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示以下，则表示以正常运行并且开机自动运行</span></span><br><span class="line"><span class="comment">#  Status Name    DisplayName  StartType</span></span><br><span class="line"><span class="comment">#  ------ ----    -----------  ---------</span></span><br><span class="line"><span class="comment"># Running W32Time Windows Time Automatic</span></span><br></pre></td></tr></table></figure><h2 id="使用点击方式"><a href="#使用点击方式" class="headerlink" title="使用点击方式"></a>使用点击方式</h2><p>在运行<code>（WIN+R快捷键）</code>或<code>windows搜索框</code>或<code>cmd</code>或<code>powershell</code>等中输入<code>services.msc</code>以打开服务界面</p><p>找到Windows Time并双击</p><p>点击下面的启动，确保能正常启动</p><p>设置启用类型为<code>自动</code>后，然后点击确定</p><!-- # 启动服务2net start w32time --><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>测试方式有很多，写一种简单通用的方法，使用<code>ntp-check</code></p><p><a href="https://www.ntp-time-server.com/ntp-software/ntp-check.html" target="_blank" rel="noopener">点击进入官网</a></p><p>为了方便，我本人直接把它下载下来了，也可以直接在这里下载 <a href="/2023/2023-01-11-ntp-server-on-windows10/ntp-check.exe" title="下载地址">下载地址</a></p><p>ntp-check是一个简单的支持ntp的客户端。操作起来也很简单，只需要输入ntp服务的地址，然后点击test就可以了</p><p>有时一次测试不成功，可以多点几次</p><p>测试本机，ip可以以输入<code>127.0.0.1</code></p><p>局网内测试，则输入本机在局域网内的ip，如果测试失败，可以考虑防火域问题</p><p>也可以</p><h1 id="提供一些常用的ntp服务器"><a href="#提供一些常用的ntp服务器" class="headerlink" title="提供一些常用的ntp服务器"></a>提供一些常用的ntp服务器</h1><p>转自</p><blockquote><p><a href="https://blog.csdn.net/sjzsel/article/details/122453509" target="_blank" rel="noopener">https://blog.csdn.net/sjzsel/article/details/122453509</a></p></blockquote><p>ntp.ntsc.ac.cn 国家授时中心网络授时域名（不建议使用）</p><p>国家授时中心服务器IP：<br>210.72.145.44</p><p>阿里云公网NTP服务器：<br>ntp.aliyun.com<br>ntp1.aliyun.com<br>ntp2.aliyun.com<br>ntp3.aliyun.com<br>ntp4.aliyun.com<br>ntp5.aliyun.com<br>ntp6.aliyun.com<br>ntp7.aliyun.com</p><p>腾讯云NTP服务器：<br>time1.cloud.tencent.com<br>time2.cloud.tencent.com<br>time3.cloud.tencent.com<br>time4.cloud.tencent.com<br>time5.cloud.tencent.com</p><p>国内一些大学NTP时间源服务器:<br>s1a.time.edu.cn 　　北京邮电大学<br>s1b.time.edu.cn 　　清华大学<br>s1c.time.edu.cn 　　北京大学<br>s1d.time.edu.cn 　　东南大学<br>s1e.time.edu.cn 　　清华大学<br>s2a.time.edu.cn 　　清华大学<br>s2b.time.edu.cn 　　清华大学<br>s2c.time.edu.cn 　　北京邮电大学<br>s2d.time.edu.cn 　　西南地区网络中心<br>s2e.time.edu.cn 　　西北地区网络中心<br>s2f.time.edu.cn 　　东北地区网络中心<br>s2g.time.edu.cn 　　华东南地区网络中心<br>s2h.time.edu.cn 　　四川大学网络管理中心<br>s2j.time.edu.cn 　　大连理工大学网络中心<br>s2k.time.edu.cn 　　CERNET桂林主节点<br>s2m.time.edu.cn 　　北京大学</p><p>苹果NTP服务器：<br>time.asia.apple.com<br>微软NTP服务器（WINDOWS系统常用）：<br>time.windows.com<br>其他NTP服务器：<br>cn.ntp.org.cn</p><p>苹果提供的公共NTP服务：<br>time1.apple.com<br>time2.apple.com<br>time3.apple.com<br>time4.apple.com<br>time5.apple.com<br>time6.apple.com<br>time7.apple.com</p><p>Google（谷歌）提供的NTP服务器：<br>time1.google.com<br>time2.google.com<br>time3.google.com<br>time4.google.com</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;内网有ntp的需求，搭一个ntp服务&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="https://blog.lopygo.com/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="https://blog.lopygo.com/tags/windows/"/>
+    
+      <category term="ntp" scheme="https://blog.lopygo.com/tags/ntp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用apt-offline来更新系统</title>
+    <link href="https://blog.lopygo.com/2022/2022-12-22-use-apt-offline/"/>
+    <id>https://blog.lopygo.com/2022/2022-12-22-use-apt-offline/</id>
+    <published>2022-12-22T15:39:23.000Z</published>
+    <updated>2025-09-16T17:33:20.686Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>对于有些不能上网的机器来说，要安装apt仓库的软件又多了个选择。apt-offline<br><a id="more"></a>  </p><p>准备写，不慌</p><p>准备写，不慌</p><p>准备写，不慌</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于有些不能上网的机器来说，要安装apt仓库的软件又多了个选择。apt-offline&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://blog.lopygo.com/categories/linux/"/>
+    
+    
+      <category term="debian" scheme="https://blog.lopygo.com/tags/debian/"/>
+    
+      <category term="linux" scheme="https://blog.lopygo.com/tags/linux/"/>
+    
+      <category term="develop" scheme="https://blog.lopygo.com/tags/develop/"/>
+    
+      <category term="apt" scheme="https://blog.lopygo.com/tags/apt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10 lstc 上不能通过smb连omv的问题</title>
+    <link href="https://blog.lopygo.com/2022/2022-11-21-smb-on-win10-lstc/"/>
+    <id>https://blog.lopygo.com/2022/2022-11-21-smb-on-win10-lstc/</id>
+    <published>2022-11-21T06:05:57.000Z</published>
+    <updated>2025-09-16T17:33:20.686Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>解决win10 lstc上不能用smb(omv)的问题，如果其它情况的smb客户端不能连服务器的，可以参考<br><a id="more"></a>  </p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>总之就是连不上，没注意看报错信息和日志</p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>我大致改了两个地方</p><h2 id="启用smb"><a href="#启用smb" class="headerlink" title="启用smb"></a>启用smb</h2><p>我开始想到可能是没打开这个功能</p><p>打开资源管理器（或任意一个文件夹，或我的电脑），在地址栏输入 <code>控制面板\程序\程序和功能</code></p><p>点击左侧<code>启用或关闭windows功能</code></p><p>找到 <code>smb</code>开头的选项，钩选</p><p>单这一步完成后，会重启，并且没用。哈哈哈哈</p><h2 id="改注册表"><a href="#改注册表" class="headerlink" title="改注册表"></a>改注册表</h2><p>参考：</p><blockquote><p><a href="https://forum.openmediavault.org/index.php?thread/45178-windows-10-ltsc-and-omv/" target="_blank" rel="noopener">https://forum.openmediavault.org/index.php?thread/45178-windows-10-ltsc-and-omv/</a></p></blockquote><ol><li><p>打开注册表编辑器</p><p> 可以在开始菜单中输入 <code>regedit</code></p><p> 可以按 win+r运行 <code>regedit</code></p><p> 可以在powershell中输入 <code>regedit</code></p></li><li><p>定位到 <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters</code></p><p> 把这一段复制下来</p><p> 在注册表编辑器的顶部地址栏粘贴</p></li><li><p>修改右侧<code>AllowInsecureGuestAuth</code>的值为1</p><p> 如果右侧没有，可以新建一个</p><p> 类型为 Dword 32位</p><p> 双击，然后将值改为<code>1</code></p></li><li><p>应该就正常了</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;解决win10 lstc上不能用smb(omv)的问题，如果其它情况的smb客户端不能连服务器的，可以参考&lt;br&gt;
+    
+    </summary>
+    
+      <category term="question" scheme="https://blog.lopygo.com/categories/question/"/>
+    
+    
+      <category term="omv" scheme="https://blog.lopygo.com/tags/omv/"/>
+    
+      <category term="smb" scheme="https://blog.lopygo.com/tags/smb/"/>
+    
+      <category term="win10 lstc" scheme="https://blog.lopygo.com/tags/win10-lstc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用choco来管理一些常见的软件</title>
+    <link href="https://blog.lopygo.com/2022/2022-11-10-use-choco/"/>
+    <id>https://blog.lopygo.com/2022/2022-11-10-use-choco/</id>
+    <published>2022-11-10T08:05:25.000Z</published>
+    <updated>2025-09-16T17:33:20.686Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>用choco来管理windows的一些软件，方便整理或写到一个脚本里。偶尔重装一次，也方便迅速搭好自己熟悉的环境<br><a id="more"></a>  </p><h1 id="choco介绍"><a href="#choco介绍" class="headerlink" title="choco介绍"></a>choco介绍</h1><p>官网</p><blockquote><p><a href="https://chocolatey.org/" target="_blank" rel="noopener">https://chocolatey.org/</a></p></blockquote><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>理论上只用官网提供的一句命令就搞定，参见官网</p><blockquote><p><a href="https://chocolatey.org/install" target="_blank" rel="noopener">https://chocolatey.org/install</a></p></blockquote><p>但是一般情况要做一些配置</p><h2 id="常用的安装"><a href="#常用的安装" class="headerlink" title="常用的安装"></a>常用的安装</h2><p>此为我本人常用的方式</p><h3 id="0-以管理员打开powershell"><a href="#0-以管理员打开powershell" class="headerlink" title="0. 以管理员打开powershell"></a>0. 以管理员打开powershell</h3><p>这个应该不用多说吧</p><h3 id="1-修改系统默认的安装路径"><a href="#1-修改系统默认的安装路径" class="headerlink" title="1. 修改系统默认的安装路径"></a>1. 修改系统默认的安装路径</h3><p>比如我要默认存放到<code>D</code>盘的 <code>Program Files</code> 下</p><p>在<code>powershell</code>里运行<code>regedit</code>打开<code>注册表编辑器</code></p><p>修改 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code> 下的<code>ProgramFilesDir</code>和<code>ProgramFilesDir (x86)</code>的值</p><p><code>ProgramFilesDir</code>的值改为：<code>D:\Program Files</code></p><p><code>ProgramFilesDir (x86)</code>的值改为：<code>D:\Program Files (x86)</code></p><p>改完后关闭<code>注册表编辑器</code></p><h3 id="2-以命令行安装choco"><a href="#2-以命令行安装choco" class="headerlink" title="2. 以命令行安装choco"></a>2. 以命令行安装choco</h3><p>在<code>powershell</code>中依次输入命令。</p><p>首字符为 # 的不输入……</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 根据自身情况改变安装路径，可跳过</span></span><br><span class="line"><span class="variable">$env:ChocolateyInstall</span>=<span class="string">"d:\choco_application"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 根据自身网络情况设置http代理，这步好像没啥用，目前不设也可以访问速度也不慢，可跳过</span></span><br><span class="line"><span class="variable">$env:http_proxy</span>=<span class="string">"http://localhost:8118"</span></span><br><span class="line"><span class="variable">$env:https_proxy</span>=<span class="string">"http://localhost:8118"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 安装，此行命令出自官方。https://chocolatey.org/install</span></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Bypass <span class="literal">-Scope</span> <span class="keyword">Process</span> <span class="literal">-Force</span>; [<span class="type">System.Net.ServicePointManager</span>]::SecurityProtocol = [<span class="type">System.Net.ServicePointManager</span>]::SecurityProtocol <span class="operator">-bor</span> <span class="number">3072</span>; iex ((<span class="built_in">New-Object</span> System.Net.WebClient).DownloadString(<span class="string">'https://community.chocolatey.org/install.ps1'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 正常情况，已经安装好。可试一下，输入choco，显示版本号则表示正常</span></span><br><span class="line">choco</span><br><span class="line"><span class="comment"># Chocolatey v1.2.0</span></span><br><span class="line"><span class="comment"># Please run 'choco -?' or 'choco &lt;command&gt; -?' for help menu.</span></span><br></pre></td></tr></table></figure><p>到此，choco 就安装完成了，后面不用看了，啰嗦。。。。。。</p><p>可以愉快的install各种软件了</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install <span class="literal">-y</span> virtualbox</span><br></pre></td></tr></table></figure><h2 id="找安装包"><a href="#找安装包" class="headerlink" title="找安装包"></a>找安装包</h2><p>可以去官方仓库</p><blockquote><p><a href="https://community.chocolatey.org/packages" target="_blank" rel="noopener">https://community.chocolatey.org/packages</a></p></blockquote><p>或者在命令行</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco find virtualbox</span><br></pre></td></tr></table></figure><h2 id="常用的环境变量"><a href="#常用的环境变量" class="headerlink" title="常用的环境变量"></a>常用的环境变量</h2><p>可以在系统的高级设置里面设置，也可以用命令行<code>powershell</code>设置</p><h3 id="ChocolateyInstall"><a href="#ChocolateyInstall" class="headerlink" title="ChocolateyInstall"></a>ChocolateyInstall</h3><p>要安装的位置，包括choco本身和choco安装的软件</p><p>默认为  <code>c:\tools</code></p><p>如设成  <code>D:\ChocoApp</code></p><h3 id="http-proxy-和-https-proxy"><a href="#http-proxy-和-https-proxy" class="headerlink" title="http_proxy 和 https_proxy"></a>http_proxy 和 https_proxy</h3><p>http代理，你懂的</p><h2 id="安装包安装位置修改"><a href="#安装包安装位置修改" class="headerlink" title="安装包安装位置修改"></a>安装包安装位置修改</h2><p>除了choco的安装位置外，choco还有可能安装的是软件的安装包，choco安装完成后，还要再解包</p><p>这里有点绕，就是绿色软件和安装包的问题。</p><p>即修改windows的默认安装位置</p><p>默认位置为</p><p>C:\Program Files</p><p>C:\Program Files (x86)</p><p><code>ChocolateyInstall</code>相当于管的是绿色软件的目录，而本栏是改安装包的的安装目录</p><p>现在开始修改：</p><p>比如我要默认存放到<code>E</code>盘，打开注册表，把 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code> 下的：</p><p><code>ProgramFilesDir</code>的值改为：E:\Program Files</p><p><code>ProgramFilesDir (x86)</code>的值改为：E:\Program Files (x86)</p><p>另外，还有一种方法修改</p><p><a href="https://docs.chocolatey.org/en-us/getting-started#overriding-default-install-directory-or-other-advanced-install-concepts" target="_blank" rel="noopener">参见官网说明</a></p><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>理论上只用官网提供的一句命令就搞定</p><blockquote><p><a href="https://chocolatey.org/install" target="_blank" rel="noopener">https://chocolatey.org/install</a></p></blockquote><p>但是我们一般要先改安装路径，或者使用代理，所以先设环境变量</p><p>步骤如下</p><p>以<code>管理员</code>打开<code>powershell</code></p><p>依次输入以下命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 根据自身情况改变安装路径，可跳过</span></span><br><span class="line"><span class="variable">$env:ChocolateyInstall</span>=<span class="string">"d:\choco_application"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 根据自身网络情况设置代理，可路过</span></span><br><span class="line"><span class="variable">$env:http_proxy</span>=<span class="string">"http://localhost:8118"</span></span><br><span class="line"><span class="variable">$env:https_proxy</span>=<span class="string">"http://localhost:8118"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 安装，此行命令出自官方。https://chocolatey.org/install</span></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Bypass <span class="literal">-Scope</span> <span class="keyword">Process</span> <span class="literal">-Force</span>; [<span class="type">System.Net.ServicePointManager</span>]::SecurityProtocol = [<span class="type">System.Net.ServicePointManager</span>]::SecurityProtocol <span class="operator">-bor</span> <span class="number">3072</span>; iex ((<span class="built_in">New-Object</span> System.Net.WebClient).DownloadString(<span class="string">'https://community.chocolatey.org/install.ps1'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 正常情况，已经安装好。可试一下，输入choco，显示版本号则表示正常</span></span><br><span class="line"></span><br><span class="line">choco</span><br><span class="line"><span class="comment"># Chocolatey v1.2.0</span></span><br><span class="line"><span class="comment"># Please run 'choco -?' or 'choco &lt;command&gt; -?' for help menu.</span></span><br></pre></td></tr></table></figure><h1 id="安装app列表"><a href="#安装app列表" class="headerlink" title="安装app列表"></a>安装app列表</h1><blockquote><p>ps, 以下的app，可以一次性写完，比如 choco install -y docker-cli everything ….</p></blockquote><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">choco install <span class="literal">-y</span> <span class="literal">-y</span> anydesk</span><br><span class="line">choco install <span class="literal">-y</span> virtualbox</span><br><span class="line">choco install <span class="literal">-y</span> docker<span class="literal">-cli</span></span><br><span class="line">choco install <span class="literal">-y</span> openvpn<span class="literal">-connect</span></span><br><span class="line">choco install <span class="literal">-y</span> everything</span><br><span class="line">choco install <span class="literal">-y</span> vscode</span><br><span class="line">choco install <span class="literal">-y</span> redis<span class="literal">-desktop</span><span class="literal">-manager</span></span><br><span class="line">choco install <span class="literal">-y</span> win<span class="literal">-rdm</span></span><br><span class="line">choco install <span class="literal">-y</span> emeditor</span><br><span class="line">choco install <span class="literal">-y</span> spotify</span><br><span class="line">choco install <span class="literal">-y</span> meld</span><br><span class="line">choco install <span class="literal">-y</span> postman</span><br><span class="line">choco install <span class="literal">-y</span> git</span><br><span class="line">choco install <span class="literal">-y</span> virt<span class="literal">-viewer</span></span><br><span class="line">choco install <span class="literal">-y</span> potplayer</span><br><span class="line">choco install <span class="literal">-y</span> <span class="number">7</span>zip</span><br><span class="line">choco install <span class="literal">-y</span> cpu<span class="literal">-z</span></span><br><span class="line">choco install <span class="literal">-y</span> adb</span><br><span class="line">choco install <span class="literal">-y</span> coretemp</span><br><span class="line">choco install <span class="literal">-y</span> dismplusplus</span><br><span class="line">choco install <span class="literal">-y</span> mobaxterm</span><br><span class="line">choco install <span class="literal">-y</span> vcredist2015</span><br><span class="line">choco install <span class="literal">-y</span> vcredistxxxx</span><br><span class="line">choco install <span class="literal">-y</span> mobaxterm <span class="literal">-ia</span> <span class="string">"'/D=D:\SomeDirectory\somebody\npp'"</span></span><br><span class="line">choco install <span class="literal">-y</span> mobaxterm <span class="literal">-ia</span> <span class="string">"'/D=D:\Program Files (x86)\Mobatek\MobaXterm'"</span></span><br><span class="line">choco install <span class="literal">-y</span> rdm</span><br><span class="line">choco install <span class="literal">-y</span> imageglass</span><br><span class="line">choco install <span class="literal">-y</span> rclone</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用choco来管理windows的一些软件，方便整理或写到一个脚本里。偶尔重装一次，也方便迅速搭好自己熟悉的环境&lt;br&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="https://blog.lopygo.com/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="https://blog.lopygo.com/tags/windows/"/>
+    
+      <category term="dev" scheme="https://blog.lopygo.com/tags/dev/"/>
+    
+      <category term="choco" scheme="https://blog.lopygo.com/tags/choco/"/>
+    
+  </entry>
+  
+</feed>
